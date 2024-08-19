@@ -131,18 +131,15 @@
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			</li>
 			<li>
-				<label>teeth</label>
 				<capacities>
 					<li>Bite</li>
 				</capacities>
 				<power>6</power>
 				<cooldownTime>1.5</cooldownTime>
-				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
 				<chanceFactor>0.1</chanceFactor>
 			</li>
 		</tools>
-		
-
 	</ThingDef>
 	<PawnKindDef ParentName="Foundation_AnomalyPawnBase">
 		<defName>Foundation_FirePachy</defName>
