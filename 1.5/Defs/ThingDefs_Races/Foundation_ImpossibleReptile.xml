@@ -163,7 +163,7 @@
 		<defName>Foundation_ImpossibleReptile</defName>
 		<label>Impossible Reptile</label>
 		<race>Foundation_ImpossibleReptile</race>
-		<combatPower>25</combatPower>
+		<combatPower>300</combatPower>
 		<lifeStages>
 			<li>
 				<labelMale>Reptile</labelMale>

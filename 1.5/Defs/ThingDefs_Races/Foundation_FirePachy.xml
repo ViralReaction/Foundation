@@ -148,7 +148,7 @@
 		<defName>Foundation_FirePachy</defName>
 		<label>Fire Pachy</label>
 		<race>Foundation_FirePachy</race>
-		<combatPower>100</combatPower>
+		<combatPower>75</combatPower>
 		<wildGroupSize>4~8</wildGroupSize>
 		<ecoSystemWeight>1.1</ecoSystemWeight>
 		<canArriveManhunter>true</canArriveManhunter>

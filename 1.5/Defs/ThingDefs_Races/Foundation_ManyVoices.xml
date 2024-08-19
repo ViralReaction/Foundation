@@ -176,7 +176,7 @@
 		<defName>Foundation_ManyVoices_Incident</defName>
 		<label>Many Voices</label>
 		<race>Foundation_ManyVoices</race>
-		<combatPower>200</combatPower>
+		<combatPower>120</combatPower>
 		<ecoSystemWeight>0.1</ecoSystemWeight>
 		<lifeStages>
 			<li>
@@ -201,7 +201,7 @@
 		<defName>Foundation_ManyVoices_Normal</defName>
 		<label>SCP 939</label>
 		<race>Foundation_ManyVoices</race>
-		<combatPower>80</combatPower>
+		<combatPower>120</combatPower>
 		<ecoSystemWeight>0.1</ecoSystemWeight>
 		<lifeStages>
 			<li>

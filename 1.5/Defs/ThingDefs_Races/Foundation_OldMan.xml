@@ -152,7 +152,7 @@
 		<defName>Foundation_OldMan</defName>
 		<label>Old Man</label>
 		<race>Foundation_OldMan</race>
-		<combatPower>25</combatPower>
+		<combatPower>300</combatPower>
 		<lifeStages>
 			<li>
 				<labelMale>Old Man</labelMale>
