@@ -5,15 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Verse.AI;
 using Verse;
-using Mono.Security;
-using UnityEngine;
-using System.Reflection.Emit;
-using Verse.Noise;
-using Foundation;
 
 namespace Foundation.HarmonyPatches
 {
