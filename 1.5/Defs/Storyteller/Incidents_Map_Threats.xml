@@ -24,10 +24,10 @@
 	</IncidentDef>
 
 	<IncidentDef ParentName="EntityAttackBase">
-		<defName>SCP939_Group</defName>
+		<defName>Foundation_IncidentWorker_ManyVoices</defName>
 		<label>SCP939</label>
-		<workerClass>Foundation.IncidentWorker_SCP939</workerClass>
-		<gameCondition>939WanderingTheArea</gameCondition>
+		<workerClass>Foundation.IncidentWorker_ManyVoices</workerClass>
+		<gameCondition>Foundation_ManvyVoicesInvasion</gameCondition>
 		<baseChance>2.0</baseChance>
 		<minRefireDays>20</minRefireDays>
 		<durationDays>

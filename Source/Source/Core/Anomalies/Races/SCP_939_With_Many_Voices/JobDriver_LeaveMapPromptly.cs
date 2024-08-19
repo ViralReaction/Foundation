@@ -17,7 +17,7 @@ namespace Foundation
             yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
             yield return new Toil()
             {
-                initAction = (Action)(() => ((GameCondition_SCP939)this.pawn.Map.GameConditionManager.ActiveConditions.Find((Predicate<GameCondition>)(x => x is GameCondition_SCP939))).AddToRegistry(this.pawn))
+                initAction = (Action)(() => ((GameCondition_ManyVoices)this.pawn.Map.GameConditionManager.ActiveConditions.Find((Predicate<GameCondition>)(x => x is GameCondition_ManyVoices))).AddToRegistry(this.pawn))
             };
         }
     }

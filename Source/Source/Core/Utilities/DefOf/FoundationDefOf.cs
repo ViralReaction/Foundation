@@ -32,7 +32,7 @@ namespace Foundation
         public static PreceptDef Foundation_Tools;
 
         public static ThoughtDef Foundation_GenderStone_BadThought;
-        public static ThoughtDef Foundation_Infected_SCP939;
+        public static ThoughtDef Foundation_Infected_ManyVoices_Breath;
 
         static FoundationDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FoundationDefOf));
     }

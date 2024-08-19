@@ -199,7 +199,7 @@
 	
 	<PawnKindDef ParentName="Foundation_AnomalyPawnBase">
 		<defName>Foundation_ManyVoices_Normal</defName>
-		<label>SCP 939</label>
+		<label>Many Voices</label>
 		<race>Foundation_ManyVoices</race>
 		<combatPower>120</combatPower>
 		<ecoSystemWeight>0.1</ecoSystemWeight>

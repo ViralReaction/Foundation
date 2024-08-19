@@ -1,15 +1,9 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
-using Foundation;
 
 namespace Foundation
 {
-    internal class ThoughtWorker_SCP939 : ThoughtWorker
+    internal class ThoughtWorker_ManyVoices : ThoughtWorker
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {

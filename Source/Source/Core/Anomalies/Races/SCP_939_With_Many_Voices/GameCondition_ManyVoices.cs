@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace Foundation
 {
-    public class GameCondition_SCP939 : GameCondition
+    public class GameCondition_ManyVoices : GameCondition
     {
         public int scp939Count = Rand.RangeInclusive(1, 6);
         private const int TickCheckSpawn = 1000;

@@ -101,7 +101,7 @@ namespace Foundation.HarmonyPatches
                 return;
             foreach (Map map in Find.Maps)
             {
-                if (map.GameConditionManager.ActiveConditions.Any<GameCondition>((Predicate<GameCondition>)(x => x is GameCondition_SCP939 && (x as GameCondition_SCP939).ActiveSCPInArea.Contains(p))))
+                if (map.GameConditionManager.ActiveConditions.Any<GameCondition>((Predicate<GameCondition>)(x => x is GameCondition_ManyVoices && (x as GameCondition_ManyVoices).ActiveSCPInArea.Contains(p))))
                 {
                     __result = WorldPawnSituation.InTravelingTransportPod;
                     break;

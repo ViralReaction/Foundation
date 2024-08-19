@@ -16,8 +16,8 @@
 	</ThoughtDef>
 
 	<ThoughtDef>
-		<defName>Foundation_Infected_SCP939</defName>
-		<workerClass>Foundation.ThoughtWorker_SCP939</workerClass>
+		<defName>Foundation_Infected_ManyVoices_Breath</defName>
+		<workerClass>Foundation.ThoughtWorker_ManyVoices</workerClass>
 		<stages>
 			<li>
 				<label>SCP-939 nearby</label>
