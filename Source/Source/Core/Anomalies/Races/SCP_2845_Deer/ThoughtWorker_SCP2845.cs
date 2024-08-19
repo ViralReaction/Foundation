@@ -1,0 +1,34 @@
+﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Verse;
+using Foundation;
+
+namespace Foundation
+{
+    internal class ThoughtWorker_SCP2845 : ThoughtWorker
+    {
+        protected override ThoughtState CurrentStateInternal(Pawn p)
+        {
+            Hediff firstHediffOfDef = p.health.hediffSet.GetFirstHediffOfDef(FoundationDefOf.Foundation_Deer_Transmute_Hediff);
+            if (firstHediffOfDef == null || firstHediffOfDef.FullyImmune())
+                return (ThoughtState)false;
+            if ((double)firstHediffOfDef.Severity >= 0.8)
+            {
+                PawnKindDef kindDef = PawnKindDefOf_SCP.Foundation_Deer_Transmuted;
+                IntVec3 result;
+                CellFinder.TryFindRandomSpawnCellForPawnNear(p.Position, p.Map, out result);
+                IntVec3 loc = CellFinder.RandomClosewalkCellNear(result, p.Map, 10);
+                if (GenSpawn.Spawn((Thing)PawnGenerator.GeneratePawn(kindDef), loc, p.Map) is Pawn pawn)
+                {
+                    pawn.health.AddHediff(HediffDefOf.Scaria);
+                    pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter);
+                }
+            }
+            return (ThoughtState)true;
+        }
+    }
+}

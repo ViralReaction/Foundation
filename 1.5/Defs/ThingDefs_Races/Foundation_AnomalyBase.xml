@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="AnimalThingBase" Name="Foundation_AnomalyBase" Abstract="True">
+		<race>
+			<thinkTreeMain>Chimera</thinkTreeMain>
+			<thinkTreeConstant>ChimeraConstant</thinkTreeConstant>
+			<hediffGiverSets Inherit="false">
+				<li>Foundation_HediffGiverSetDef</li>
+			</hediffGiverSets>
+			<fleshType MayRequire="Ludeon.RimWorld.Anomaly">EntityFlesh</fleshType>
+		</race>
+	</ThingDef>
+	
+	<PawnKindDef Name="Foundation_AnomalyPawnBase" Abstract="True">
+    <defaultFactionType>Entities</defaultFactionType>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+  </PawnKindDef>
+
+</Defs>

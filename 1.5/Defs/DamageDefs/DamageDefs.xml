@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- SCP-106 Old Man -->
+	<DamageDef ParentName="Scratch">
+		<defName>Foundation_OldMan_Scratch</defName>
+		<label>old man scratch</label>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been sliced to death.</deathMessage>
+		<additionalHediffs>
+			<li>
+				<hediff>Foundation_OldMan_Ooze_Hediff</hediff>
+				<severityPerDamageDealt>0.015</severityPerDamageDealt>
+				<victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+		<defaultDamage>8</defaultDamage>
+		<isRanged>false</isRanged>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+	</DamageDef>
+
+</Defs>

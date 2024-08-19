@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef ParentName="EntityAttackBase">
+		<defName>Foundation_Incident_SCP096_Hunt</defName>
+		<label>SCP-096</label>
+		<workerClass>Foundation.IncidentWorker_SCP096</workerClass>
+		<baseChance>1</baseChance>
+		<pointsScaleable>false</pointsScaleable>
+		<!--tale>ManhunterPack</tale-->
+		<minRefireDays>35</minRefireDays>
+		<minAnomalyThreatLevel>1</minAnomalyThreatLevel>
+	</IncidentDef>
+
+	<IncidentDef ParentName="EntityAttackBase">
+		<defName>Foundation_Incident_SCP682_Hunt</defName>
+		<label>SCP-682 Sighted</label>
+		<workerClass>Foundation.IncidentWorker_682</workerClass>
+		<baseChance>1</baseChance>
+		<pointsScaleable>false</pointsScaleable>
+		<!--tale>ManhunterPack</tale-->
+		<minRefireDays>35</minRefireDays>
+		<minAnomalyThreatLevel>1</minAnomalyThreatLevel>
+	</IncidentDef>
+
+	<IncidentDef ParentName="EntityAttackBase">
+		<defName>SCP939_Group</defName>
+		<label>SCP939</label>
+		<workerClass>Foundation.IncidentWorker_SCP939</workerClass>
+		<gameCondition>939WanderingTheArea</gameCondition>
+		<baseChance>2.0</baseChance>
+		<minRefireDays>20</minRefireDays>
+		<durationDays>
+			<min>10</min>
+			<max>20</max>
+		</durationDays>
+		<minAnomalyThreatLevel>1</minAnomalyThreatLevel>
+	</IncidentDef>
+	
+	<IncidentDef ParentName="EntityAttackBase">
+		<defName>Foundation_Incident_SCP2845_Hunt</defName>
+		<label>The Deer and minions</label>
+		<workerClass>Foundation.IncidentWorker_SCP2845</workerClass>
+		<pointsScaleable>true</pointsScaleable>
+		<minRefireDays>35</minRefireDays>
+		<minAnomalyThreatLevel>1</minAnomalyThreatLevel>
+	</IncidentDef>
+	
+	<IncidentDef ParentName="EntityAttackBase">
+		<defName>Foundation_Incident_Refuted_Hunt</defName>
+		<label>Human Refuted flock</label>
+		<workerClass>Foundation.IncidentWorker_Refuted</workerClass>
+		<pointsScaleable>true</pointsScaleable>
+		<minRefireDays>30</minRefireDays>
+		<minAnomalyThreatLevel>1</minAnomalyThreatLevel>
+	</IncidentDef>
+
+</Defs>

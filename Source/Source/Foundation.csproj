@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B91AEE05-43AC-4F9B-A7E7-6F3B91508562}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Foundation</RootNamespace>
+    <AssemblyName>Foundation</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core\Comps\CompGiveHediff.cs" />
+    <Compile Include="Core\Comps\Properties\CompProperties_ShyGuy.cs" />
+    <Compile Include="Core\Comps\CompUsedGraphic.cs" />
+    <Compile Include="Core\Comps\Comp_AnomalyHeal.cs" />
+    <Compile Include="Core\Comps\CompShyGuy.cs" />
+    <Compile Include="Core\Comps\Hatching Utility.cs" />
+    <Compile Include="Core\Comps\IngestOutcomeDoer_RemoveHediff.cs" />
+    <Compile Include="Core\Comps\Properties\CompPropertiesGiveHediff.cs" />
+    <Compile Include="Core\Comps\Properties\CompPropertiesHatcher.cs" />
+    <Compile Include="Core\Comps\Properties\CompProperties_AnomalyHeal.cs" />
+    <Compile Include="Core\Comps\Properties\CompProperties_UsedGraphic.cs" />
+    <Compile Include="Core\Harmony Patches\SCPHarmony_Patches.cs" />
+    <Compile Include="Core\Psychic Suppresion\Bulding_PsychicSuppressionField.cs" />
+    <Compile Include="Core\Psychic Suppresion\CompProperties_PsychicSuppressionField.cs" />
+    <Compile Include="Core\Psychic Suppresion\CompPsychicSuppress.cs" />
+    <Compile Include="Core\Psychic Suppresion\HarmonyPatches.cs" />
+    <Compile Include="Core\Psychic Suppresion\PsychicCachingUtility.cs" />
+    <Compile Include="Core\Psychic Suppresion\SuppressionFieldInterface.cs" />
+    <Compile Include="Core\Psychic Suppresion\SuppressionFieldManager.cs" />
+    <Compile Include="Core\Psychic Suppresion\SuppressionFieldUtility.cs" />
+    <Compile Include="Core\Anomalies\SCP_035_Mask\CompUseEffect_UseSCP35.cs" />
+    <Compile Include="Core\Anomalies\Races\Foundation_ShyGuy\IncidentWorker_SCP096.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_106_Old_Man\Comp_OldMan.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_106_Old_Man\CompProperties_OldMan.cs" />
+    <Compile Include="Core\Anomalies\Foundation_GenderStone\CompUseEffect_UseGenderStone.cs" />
+    <Compile Include="Core\Anomalies\Foundation_PlasticOrgans\Hediff_SCP2687.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_2845_Deer\IncidentWorker_2845.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_2845_Deer\ThoughtWorker_SCP2845.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_3199_Human_Refuted\DeathActionWorker_Refuted_SpawnEgg.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_3199_Human_Refuted\IncidentWorker_SCP3199.cs" />
+    <Compile Include="Core\Anomalies\Foundation_Panacea\CompUseEffect_UsePanacea.cs" />
+    <Compile Include="Core\Anomalies\SCP_578 Bloodstone\CompUseEffect_UseSCP578.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_682_Reptile\IncidentWorker_SCP682.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_939_With_Many_Voices\CompProperties_Voices.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_939_With_Many_Voices\CompVoices.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_939_With_Many_Voices\GameCondition_SCP939.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_939_With_Many_Voices\IncidentWorker_SCP939.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_939_With_Many_Voices\JobDriver_LeaveMapPromptly.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_939_With_Many_Voices\MentalState_Voices.cs" />
+    <Compile Include="Core\Utilities\SPExtended\SPExtra.cs" />
+    <Compile Include="Core\Utilities\SPExtended\SPMultiCell.cs" />
+    <Compile Include="Core\Utilities\SPExtended\SPTrig.cs" />
+    <Compile Include="Core\Utilities\SPExtended\SPTuples.cs" />
+    <Compile Include="Core\Anomalies\Races\SCP_939_With_Many_Voices\ThoughtWorker_939.cs" />
+    <Compile Include="Core\Startup.cs" />
+    <Compile Include="Core\Utilities\DefOf\PawnKindDefOf_SCP.cs" />
+    <Compile Include="Core\Utilities\DefOf\FoundationDefOf.cs" />
+    <Compile Include="Core\Utilities\GameComponent.cs" />
+    <Compile Include="Core\Utilities\SCPRadius.cs" />
+    <Compile Include="Core\Utilities\Debug.cs" />
+    <Compile Include="Core\Utilities\Utilities.cs" />
+    <Compile Include="Gizmo_HumeShield.cs" />
+    <Compile Include="Core\Comps\Properties\CompProperties_HumeShield.cs" />
+    <Compile Include="Core\Comps\CompHumeShield.cs" />
+    <Compile Include="Ideology\Harmony.cs" />
+    <Compile Include="Ideology\ThoughtWorker_Precept_Anomaly.cs" />
+    <Compile Include="Ideology\ThoughtWorker_Precept_AnomalyInColony.cs" />
+    <Compile Include="Ideology\ThoughtWorker_Precept_AnomalyMap.cs" />
+    <Compile Include="Ideology\ThoughtWorker_Precept_AnomalyPresent.cs" />
+    <Compile Include="Ideology\ThoughtWorker_Precept_Social_Anomaly.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer">
+      <Version>2.2.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>1.5.4146-beta</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\0Harmony.dll" />
+    <Content Include="bin\Debug\SCP.dll" />
+    <Content Include="bin\Debug\SCP.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="Core\Anomalies\Items\" />
+    <Folder Include="Core\Anomalies\ThoughtWorkers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- SCP 2687 -->
+	<ThingDef ParentName="BodyPartBase">
+		<defName>Foundation_Plastic_Organ_Model</defName>
+		<label>Plastic Organ Model</label>
+		<description>A small polyethylene model of an organ presumed to have originally been manufactured by Prometheus Labs. Adding a miniscule amount of organic material to this causes it to grow into a functional, albeit plastic organ.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>Foundation_InstallPlasticEye</RecipeDef>
+			<RecipeDef>Foundation_InstallPlasticHeart</RecipeDef>
+			<RecipeDef>Foundation_InstallPlasticLung</RecipeDef>
+			<RecipeDef>Foundation_InstallPlasticStomach</RecipeDef>
+			<RecipeDef>Foundation_InstallPlasticKidney</RecipeDef>
+			<RecipeDef>Foundation_InstallPlasticLiver</RecipeDef>
+			<HediffDef>Foundation_Plastic_Poison</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Health/SCP2687A</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<DeteriorationRate>1</DeteriorationRate>
+			<Mass>0.1</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>4000</WorkToMake>
+			<MarketValue>100</MarketValue>
+		</statBases>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<drawerType>MapMeshOnly</drawerType>
+		<stackLimit>20</stackLimit>
+		<thingCategories>
+			<li>Foundation_Objects</li>
+		</thingCategories>
+		<tradeTags>
+			<li>SCP</li>
+		</tradeTags>
+		<techLevel>Industrial</techLevel>
+		<burnableByRecipe>false</burnableByRecipe>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<minRewardCount>2</minRewardCount>
+	</ThingDef>
+
+	<!-- SCP-2687 Cure Plastic Poisoning -->
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>Foundation_Plastic_Poison_Cure</defName>
+		<label>Polyethylene Purge</label>
+		<description>Polyethylene Purge uses anomalous genetic material to modify cells surrounding a SCP-2687-B instance, creating specialized organelles capable of processing the polyethylene plastic excreted by SCP-2687-B instances during cellular replacement.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Foundation_Plastic_Poison</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/SCP_2687_Cure</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>18</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>0.7</Flammability>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="Foundation.IngestionOutcomeDoer_RemoveHediff">
+					<hediffDef>Foundation_Plastic_Poison</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

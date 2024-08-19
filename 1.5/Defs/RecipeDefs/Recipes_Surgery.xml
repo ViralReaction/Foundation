@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- 2687 Recipe -->
+	<RecipeDef>
+		<defName>Foundation_Make_Plastic_Organ</defName>
+		<label>make scp-2687-a model</label>
+		<description>Make Plastic Organ Model.</description>
+		<jobString>Making Plastic Organ Model.</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+		<workAmount>1000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neutroamine</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Neutroamine</li>
+				<li>Plasteel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>Neutroamine</li>
+				<li>Plasteel</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<Foundation_Plastic_Organ_Model>1</Foundation_Plastic_Organ_Model>
+		</products>
+	</RecipeDef>
+
+	<!-- Surgery Install Recipes -->
+	<RecipeDef Name="Install_PlasticOrganBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Foundation_Plastic_Organ_Model</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Foundation_Plastic_Organ_Model</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+
+	<RecipeDef ParentName="Install_PlasticOrganBase">
+		<defName>Foundation_InstallPlasticEye</defName>
+		<label>install anomalous eye</label>
+		<description>Install anomalous eye.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Foundation_Plastic_Organ_Model</ThingDef>
+			<HediffDef>Foundation_Plastic_Eye</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anomalous eye.</jobString>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Foundation_Plastic_Eye</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="Install_PlasticOrganBase">
+		<defName>Foundation_InstallPlasticHeart</defName>
+		<label>install anomalous Heart</label>
+		<description>Install anomalous Heart.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Foundation_Plastic_Organ_Model</ThingDef>
+			<HediffDef>Foundation_Plastic_Heart</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anomalous Heart.</jobString>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Foundation_Plastic_Heart</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="Install_PlasticOrganBase">
+		<defName>Foundation_InstallPlasticLung</defName>
+		<label>install anomalous Lung</label>
+		<description>Install anomalous Lung.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Foundation_Plastic_Organ_Model</ThingDef>
+			<HediffDef>Foundation_Plastic_Lung</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anomalous Lung.</jobString>
+		<appliedOnFixedBodyParts>
+			<li>Lung</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Foundation_Plastic_Lung</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="Install_PlasticOrganBase">
+		<defName>Foundation_InstallPlasticStomach</defName>
+		<label>install anomalous Stomach</label>
+		<description>Install anomalous Stomach.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Foundation_Plastic_Organ_Model</ThingDef>
+			<HediffDef>Foundation_Plastic_Stomach</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anomalous Stomach.</jobString>
+		<appliedOnFixedBodyParts>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Foundation_Plastic_Stomach</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="Install_PlasticOrganBase">
+		<defName>Foundation_InstallPlasticKidney</defName>
+		<label>install anomalous Kidney</label>
+		<description>Install anomalous Kidney.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Foundation_Plastic_Organ_Model</ThingDef>
+			<HediffDef>Foundation_Plastic_Kidney</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anomalous Kidney.</jobString>
+		<appliedOnFixedBodyParts>
+			<li>Kidney</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Foundation_Plastic_Kidney</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="Install_PlasticOrganBase">
+		<defName>Foundation_InstallPlasticLiver</defName>
+		<label>install anomalous liver</label>
+		<description>Install anomalous liver.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Foundation_Plastic_Organ_Model</ThingDef>
+			<HediffDef>Foundation_Plastic_Liver</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing anomalous liver.</jobString>
+		<appliedOnFixedBodyParts>
+			<li>Liver</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Foundation_Plastic_Liver</addsHediff>
+	</RecipeDef>
+
+</Defs>

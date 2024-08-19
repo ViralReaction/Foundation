@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>Foundation_GenderStone_BadThought</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/GenericBad</icon>
+		<durationDays>15</durationDays>
+		<stages>
+			<li>
+				<label>used SCP-113</label>
+				<description>My body has been forcibly changed...</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>Foundation_Infected_SCP939</defName>
+		<workerClass>Foundation.ThoughtWorker_SCP939</workerClass>
+		<stages>
+			<li>
+				<label>SCP-939 nearby</label>
+				<description>I'm starting to forget what I was supposed to be doing...</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>Foundation_Ate_SunlightPills</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>Foundation_SunlightHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>sunlight pills</label>
+				<description>I feel the sun's warmth and a gentle tropical breeze.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>Foundation_TransmuteTime</defName>
+		<workerClass>Foundation.ThoughtWorker_SCP2845</workerClass>
+		<stages>
+			<li>
+				<label>SCP-2845 Transmutation Aura</label>
+				<description>I feel like I'm falling apart at the seams.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

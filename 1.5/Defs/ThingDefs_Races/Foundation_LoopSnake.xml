@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="Foundation_AnomalyBase">
+		<defName>Foundation_LoopSnake</defName>
+		<label>Loop Snake</label>
+		<description>Item #: SCP-2584\n\nObject Class: Safe\n\nSCP-2584 has no head or tail as its body forms a continuous closed loop. Otherwise, SCP-2584’s tissue and anatomy is completely normal, save for its circular spine, circulatory system, and digestive tract.\n\nAs SCP-2584 can neither eat nor breathe, the source of SCP-2584’s energy is unknown. The digestive tract of SCP-2584 cycles the same matter continuously, but is somehow able to gain metabolic energy with each cycle without expending any of the nutrients.</description>
+		<hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
+		<statBases>
+			<MoveSpeed>3.5</MoveSpeed>
+			<MarketValue>150</MarketValue>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<ComfyTemperatureMax>60</ComfyTemperatureMax>
+			<MinimumContainmentStrength>80</MinimumContainmentStrength>
+		</statBases>
+		<uiIconPath>Things/Pawn/Animal/SCP2584/SCP2584_south_Silhouette</uiIconPath>
+		<tradeability>None</tradeability>
+		<hideStats>true</hideStats>
+		<onlyShowInspectString>true</onlyShowInspectString>
+		<hideMainDesc>true</hideMainDesc>
+		<tools>
+			<li>
+				<label>body</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>1</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_HoldingPlatformTarget">
+				<baseEscapeIntervalMtbDays>45</baseEscapeIntervalMtbDays>
+				<lookForTargetOnEscape>false</lookForTargetOnEscape>
+			</li>
+			<li Class="CompProperties_AttachPoints">
+				<points>
+					<li>
+						<offset>(-.4, 0, 0.30)</offset>
+						<type>PlatformRestraint0</type>
+					  </li>
+					  <li>
+						<offset>(.4, 0, 0.30)</offset>
+						<type>PlatformRestraint1</type>
+					  </li>
+					  <li>
+						<offset>(.3, 0, -.5)</offset>
+						<type>PlatformRestraint2</type>
+					  </li>
+					  <li>
+						<offset>(-.3, 0, -.5)</offset>
+						<type>PlatformRestraint3</type>
+					  </li>
+				</points>
+			</li>
+			<li Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<knowledgeCategory>Foundation_AnomalyKnowledge</knowledgeCategory>
+				<anomalyKnowledge>3</anomalyKnowledge>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<requiresHoldingPlatform>true</requiresHoldingPlatform>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_AsexualReproduction">
+				<reproductionIntervalDays>45</reproductionIntervalDays>
+				<customString>Binary Fission in: </customString>
+				<isGreenGoo>true</isGreenGoo>
+				<GreenGooLimit>15</GreenGooLimit>
+				<GreenGooTarget>Foundation_LoopSnake</GreenGooTarget>
+			</li>		
+		</comps>
+		<race>
+			<body>Snake</body>
+			<predator>false</predator>
+			<baseBodySize>0.25</baseBodySize>
+			<baseHungerRate>0.0</baseHungerRate>
+			<baseHealthScale>1</baseHealthScale>
+			<foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+			<leatherDef>Leather_Lizard</leatherDef>
+			<useMeatFrom>Cobra</useMeatFrom>
+			<wildness>0</wildness>
+			<petness>0.5</petness>
+			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0</manhunterOnDamageChance>
+			<nameOnTameChance>1</nameOnTameChance>
+			<lifeExpectancy>20</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>EntityFullyFormed</def>
+					<soundCall>Pawn_Revenant_Call</soundCall>
+					<soundWounded>Pawn_Revenant_Wounded</soundWounded>
+					<soundDeath>Pawn_Revenant_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<hediffGiverSets>
+				<li>AnomalyEntity</li>
+			</hediffGiverSets>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="Foundation_AnomalyPawnBase">
+		<defName>Foundation_LoopSnake</defName>
+		<label>Loop Snake</label>
+		<race>Foundation_LoopSnake</race>
+		<combatPower>25</combatPower>
+		<ecoSystemWeight>0.01</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/SCP2584/SCP2584</texPath>
+					<drawSize>2.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Cobra/Dessicated_Cobra</texPath>
+					<drawSize>1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+
+
+</Defs>

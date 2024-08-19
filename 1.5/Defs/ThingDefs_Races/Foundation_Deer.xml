@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="Foundation_AnomalyBase">
+		<defName>Foundation_Deer</defName>
+		<label>The Deer</label>
+		<description>Item #: SCP-2845\n\nObject Class: Keter\n\nSCP-2845 is an extraterrestrial quadruped entity, terminating in a head with humanoid facial features. SCP-2845 possesses antlers that are white with black marbling in coloration, and have not been observed to shed.\n\nSCP-2845 is capable of instantaneous transmutation and reconstruction of matter, often converting living subjects into SCP-2845-1.</description>
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+			<MarketValue>3000</MarketValue>
+			<ComfyTemperatureMin>-90</ComfyTemperatureMin>
+			<FilthRate>20</FilthRate>
+			<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<MinimumContainmentStrength>80</MinimumContainmentStrength>
+			<StaggerDurationFactor>0</StaggerDurationFactor>
+		</statBases>
+		<uiIconPath>Things/Pawn/Animal/Foundation_Deer/Foundation_Deer_east_Silhouette</uiIconPath>
+		<tradeability>None</tradeability>
+		<hideStats>true</hideStats>
+		<onlyShowInspectString>true</onlyShowInspectString>
+		<hideMainDesc>true</hideMainDesc>
+		<race>
+			<thinkTreeMain>Foundation_AI</thinkTreeMain>
+			<body>QuadrupedAnimalWithHoovesAndHorn</body>
+			<baseBodySize>4.0</baseBodySize>
+			<baseHungerRate>0</baseHungerRate>
+			<baseHealthScale>8.0</baseHealthScale>
+			<fleshType>EntityFlesh</fleshType>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<hasCorpse>false</hasCorpse>
+			<wildness>1</wildness>
+			<lifeExpectancy>100</lifeExpectancy>
+			<trainability>None</trainability>
+			<lifeStageAges>
+				<li>
+					<def>EntityFullyFormed</def>
+					<soundWounded>Pawn_Elk_Wounded</soundWounded>
+					<soundDeath>Pawn_Elk_Death</soundDeath>
+					<soundCall>Pawn_Elk_Call</soundCall>
+					<soundAngry>Pawn_Elk_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<tools>
+			<li>
+				<label>left hoof</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right hoof</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>28</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>17</power>
+				<cooldownTime>2</cooldownTime>
+				<chanceFactor>0.2</chanceFactor>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+			<li>
+				<label>antlers</label>
+				<capacities>
+				  <li>Stab</li>
+				</capacities>
+				<power>23</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.50</armorPenetration>
+				<linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+			  </li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_HoldingPlatformTarget">
+				<baseEscapeIntervalMtbDays>45</baseEscapeIntervalMtbDays>
+				<lookForTargetOnEscape>false</lookForTargetOnEscape>
+			</li>
+			<li Class="CompProperties_AttachPoints">
+				<points>
+					<li>
+						<offset>(-.4, 0, 0.30)</offset>
+						<type>PlatformRestraint0</type>
+					  </li>
+					  <li>
+						<offset>(.4, 0, 0.30)</offset>
+						<type>PlatformRestraint1</type>
+					  </li>
+					  <li>
+						<offset>(.3, 0, -.5)</offset>
+						<type>PlatformRestraint2</type>
+					  </li>
+					  <li>
+						<offset>(-.3, 0, -.5)</offset>
+						<type>PlatformRestraint3</type>
+					  </li>
+				</points>
+			</li>
+			<li Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<knowledgeCategory>Foundation_AnomalyKnowledge</knowledgeCategory>
+				<anomalyKnowledge>3</anomalyKnowledge>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<requiresHoldingPlatform>true</requiresHoldingPlatform>
+			</li>
+			<li Class="Foundation.Comps.CompProperties_GiveHediffSeverity">
+				<hediff>Foundation_Deer_Transmute_Hediff</hediff>
+				<range>10</range>
+				<severityTick>0.1</severityTick>
+				<tickInterval>600</tickInterval>
+				<defNamesImmune>
+					<li>Foundation_Deer</li>
+					<li>Foundation_Deer_Transmuted</li>
+				</defNamesImmune>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<PawnKindDef ParentName="Foundation_AnomalyPawnBase">
+		<defName>Foundation_Deer</defName>
+		<label>The Deer</label>
+		<race>Foundation_Deer</race>
+		<combatPower>1100</combatPower>
+		<ecoSystemWeight>1.1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Foundation_Deer/Foundation_Deer</texPath>
+					<drawSize>3.1</drawSize>
+					<shadowData>
+						<volume>(0.5, 0.5, 0.5)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Elk/Dessicated_ElkMale</texPath>
+					<drawSize>3.1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- SCP-2845-1 -->
+	<ThingDef ParentName="Foundation_AnomalyBase">
+		<defName>Foundation_Deer_Transmuted</defName>
+		<label>SCP-2845-1</label>
+		<description>Item #: SCP-2845-1
+Object Class: Euclid
+		
+SCP-2845-1 designates organisms that have been modified by SCP-2845. Instances of SCP-2845-1 are hexagonal columns uniformly measuring 2.4 meters in height, with rubbery yellow-green skin.
+
+SCP-2845-1 instances do not have any outward sense organs, and autopsy has shown that internal organs are likewise absent, save the brain, which now takes up the entirety of the column and contains the reconstituted mass of the other organs and some additional outside materials. It is unknown how SCP-2845-1 instances derive nutrients, or if any nutrition is required.</description>
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+			<MarketValue>1000</MarketValue>
+			<ComfyTemperatureMin>-90</ComfyTemperatureMin>
+			<FilthRate>20</FilthRate>
+			<MeatAmount>0</MeatAmount>
+			<LeatherAmount>0</LeatherAmount>
+			<ArmorRating_Sharp>0.69</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.69</ArmorRating_Blunt>
+			<ArmorRating_Heat>-0.2</ArmorRating_Heat>
+		</statBases>
+		<butcherProducts>
+			<Steel>15</Steel>
+		</butcherProducts>
+		<uiIconScale>1.6</uiIconScale>
+		<race>
+			<body>Foundation_PillarBod</body>
+			<herdAnimal>false</herdAnimal>
+			<baseBodySize>1.5</baseBodySize>
+			<baseHungerRate>0</baseHungerRate>
+			<baseHealthScale>2</baseHealthScale>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<leatherDef>Leather_Plain</leatherDef>
+			<useMeatFrom>Cat</useMeatFrom>
+			<wildness>1</wildness>
+			<gestationPeriodDays>6.66</gestationPeriodDays>
+			<lifeExpectancy>100</lifeExpectancy>
+			<trainability>None</trainability>
+			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>10</manhunterOnDamageChance>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Elk_Wounded</soundWounded>
+					<soundDeath>Pawn_Elk_Death</soundDeath>
+					<soundCall>Pawn_Elk_Call</soundCall>
+					<soundAngry>Pawn_Elk_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<tools>
+			<li>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+			</li>
+		</tools>
+	</ThingDef>
+  
+	<PawnKindDef ParentName="Foundation_AnomalyPawnBase">
+		<defName>Foundation_Deer_Transmuted</defName>
+		<label>SCP-2845-1</label>
+		<race>Foundation_Deer_Transmuted</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Building/Furniture/Column</texPath>
+					<drawSize>1.5</drawSize>
+					<color>(189, 206, 59)</color>
+					<shadowData>
+						<volume>(0.5, 0.5, 0.5)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Building/Furniture/Column</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

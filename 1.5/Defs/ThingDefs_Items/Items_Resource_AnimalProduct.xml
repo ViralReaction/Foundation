@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ====== Eggs ====== -->
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>Foundation_Refuted_Egg</defName>
+		<label>SCP-3199 egg (fert.)</label>
+		<description>Item #: SCP-3199-1\n\nObject Class: Keter\n\nHeat is a primary component in the growth and development of SCP-3199's eggs, and Foundation Researchers are particularly apprehensive towards the idea, believing it would almost certainly result in a second containment breach. Eggs have only been neutralized by extreme cold.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProductRaw/EggOval/EggOval_A</texPath>
+			<drawSize>1.5</drawSize>
+			<color>(245,245,245)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>0</Flammability>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Foundation_Objects</li>
+		</thingCategories>
+		<useHitPoints>false</useHitPoints>
+		<stackLimit>1</stackLimit>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3.5</hatcherDaystoHatch>
+				<hatcherPawn>Foundation_Refuted</hatcherPawn>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-60</minSafeTemperature>
+				<maxSafeTemperature>500</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>Foundation_FirePachy_Egg</defName>
+		<label>Fire Pachy egg (fert.)</label>
+		<description>A fertilized fire pachy egg. If all goes well, it should hatch into an instance of fire pachy. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+			<color>(245,245,245)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<Flammability>0</Flammability>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>13</hatcherDaystoHatch>
+				<hatcherPawn>Foundation_FirePachy</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>SCP</li>
+		</tradeTags>
+	</ThingDef>
+
+</Defs>

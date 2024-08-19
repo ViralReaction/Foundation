@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Foundation_Root</defName>
+		<label>Anomalies</label>
+		<parent>Root</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>Foundation_Objects</defName>
+		<label>Objects</label>
+		<parent>Foundation_Root</parent>
+	</ThingCategoryDef>
+
+</Defs>

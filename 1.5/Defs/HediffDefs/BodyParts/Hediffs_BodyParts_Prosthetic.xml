@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- SCP 2687 Plastic Organs -->
+	<HediffDef Name="Foundation_PlasticOrganBase" ParentName="AddedBodyPartBase" Abstract="true">
+		<hediffClass>Foundation.Hediff_PlasticOrgans</hediffClass>
+		<descriptionHyperlinks>
+			<ThingDef>Foundation_Plastic_Organ_Model</ThingDef>
+		</descriptionHyperlinks>
+		<defaultLabelColor>(0, 1, 0)</defaultLabelColor>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>Plasteel</spawnThingOnRemoved>
+	</HediffDef>
+
+	<!-- SCP 2687 Plastic Organs -->
+	<HediffDef ParentName="Foundation_PlasticOrganBase">
+		<defName>Foundation_Plastic_Eye</defName>
+		<label>Plastic Eye</label>
+		<description>An installed anomalous eye.</description>
+		<labelNoun>an anomalous eye</labelNoun>
+	</HediffDef>
+
+	<HediffDef ParentName="Foundation_PlasticOrganBase">
+		<defName>Foundation_Plastic_Heart</defName>
+		<label>Plastic Heart</label>
+		<description>An installed anomalous Heart.</description>
+		<labelNoun>an anomalous Heart</labelNoun>
+	</HediffDef>
+
+	<HediffDef ParentName="Foundation_PlasticOrganBase">
+		<defName>Foundation_Plastic_Lung</defName>
+		<label>Plastic Lung</label>
+		<description>An installed anomalous Lung.</description>
+		<labelNoun>an anomalous Lung</labelNoun>
+	</HediffDef>
+
+	<HediffDef ParentName="Foundation_PlasticOrganBase">
+		<defName>Foundation_Plastic_Stomach</defName>
+		<label>Plastic Stomach</label>
+		<description>An installed anomalous Stomach.</description>
+		<labelNoun>an anomalous Stomach</labelNoun>
+	</HediffDef>
+
+	<HediffDef ParentName="Foundation_PlasticOrganBase">
+		<defName>Foundation_Plastic_Kidney</defName>
+		<label>Plastic Kidney</label>
+		<description>An installed anomalous Kidney.</description>
+		<labelNoun>an anomalous Kidney</labelNoun>
+	</HediffDef>
+
+	<HediffDef ParentName="Foundation_PlasticOrganBase">
+		<defName>Foundation_Plastic_Liver</defName>
+		<label>Plastic Liver</label>
+		<description>An installed anomalous liver.</description>
+		<labelNoun>an anomalous liver</labelNoun>
+	</HediffDef>
+
+</Defs>

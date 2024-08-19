@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="Foundation_AnomalyBase">
+		<defName>Foundation_Refuted</defName>
+		<label>Human Refuted</label>
+		<description>Item #: SCP-3199\n\nObject Class: Keter\n\nSCP-3199 denotes a species of sapient Category-5 biological entities of currently indeterminable origin, though tissue samples indicate the presence of Silkie chicken, chimpanzee, stoat, mussel, adder, and human DNA. They will produce large eggs of an off-white coloration and rubbery appearance. There is no known limit to the number of eggs SCP-3199 is capable of producing, and the standing theory is as follows: given enough time, a single instance could singlehandedly perform an LK-Class species transmutation scenario.\n\nHowever, complete eradication has proven impossible difficult, as all instances of SCP-3199 (regardless of age) carry one egg within a specialized stomach-like organ upon birth, assuring that one living instance will persist through even ordinary means of constant and lethal assault. This biological phenomena is presumed to be, in itself, anomalous in origin.\n\nSCP-3199 are opportunistic hunters, engaging with live subjects within a currently unidentified radius within a radius of 0.6 kilometers surrounding hatchlings that have not yet reached full adolescence. Average speed is recorded at 25 km/h. Upon contact with human or animal subjects, SCP-3199 will proceed to [REDACTED], liquefying internal organs and bone structure. A suitable cadaver is then transferred within range of the closest hatchling.</description>
+		<statBases>
+			<MoveSpeed>6.9</MoveSpeed>
+			<MarketValue>300</MarketValue>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<ComfyTemperatureMax>300</ComfyTemperatureMax>
+			<ToxicResistance>1</ToxicResistance>
+			<MinimumContainmentStrength>80</MinimumContainmentStrength>
+		</statBases>
+		<uiIconPath>Things/Pawn/Animal/Foundation_Refuted/Foundation_Refuted_east_Silhouette</uiIconPath>
+		<tradeability>None</tradeability>
+		<hideStats>true</hideStats>
+		<onlyShowInspectString>true</onlyShowInspectString>
+		<hideMainDesc>true</hideMainDesc>
+		<comps>
+			<li Class="CompProperties_HoldingPlatformTarget">
+				<baseEscapeIntervalMtbDays>45</baseEscapeIntervalMtbDays>
+				<lookForTargetOnEscape>true</lookForTargetOnEscape>
+			</li>
+			<li Class="CompProperties_AttachPoints">
+				<points>
+					<li>
+						<offset>(-.4, 0, 0.30)</offset>
+						<type>PlatformRestraint0</type>
+					  </li>
+					  <li>
+						<offset>(.4, 0, 0.30)</offset>
+						<type>PlatformRestraint1</type>
+					  </li>
+					  <li>
+						<offset>(.3, 0, -.5)</offset>
+						<type>PlatformRestraint2</type>
+					  </li>
+					  <li>
+						<offset>(-.3, 0, -.5)</offset>
+						<type>PlatformRestraint3</type>
+					  </li>
+				</points>
+			</li>
+			<li Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<knowledgeCategory>Foundation_AnomalyKnowledge</knowledgeCategory>
+				<anomalyKnowledge>3</anomalyKnowledge>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<requiresHoldingPlatform>true</requiresHoldingPlatform>
+			</li>
+			<li Class="CompProperties_EggLayer">
+				<eggUnfertilizedDef>Foundation_Refuted_Egg</eggUnfertilizedDef>
+				<eggFertilizedDef>Foundation_Refuted_Egg</eggFertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>1.5</eggLayIntervalDays>
+				<eggCountRange>1</eggCountRange>
+				<eggLayFemaleOnly>false</eggLayFemaleOnly>
+			</li>
+		</comps>
+		<race>
+			<deathAction>
+				<workerClass>Foundation.DeathActionWorker_Refuted_SpawnEgg</workerClass>
+			</deathAction>
+			<body>Bird</body>
+			<herdAnimal>true</herdAnimal>
+			<predator>true</predator>
+			<needsRest>false</needsRest>
+			<baseBodySize>2</baseBodySize>
+			<baseHungerRate>0.4</baseHungerRate>
+			<baseHealthScale>1.8</baseHealthScale>
+			<foodType>CarnivoreAnimalStrict</foodType>
+			<leatherDef>Leather_Patch</leatherDef>
+			<specificMeatDef>Meat_Twisted</specificMeatDef>
+			<wildness>0.9</wildness>
+			<trainability>None</trainability>
+			<gestationPeriodDays>10</gestationPeriodDays>
+			<nameOnTameChance>1</nameOnTameChance>
+			<lifeExpectancy>30</lifeExpectancy>
+			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>2</manhunterOnDamageChance>
+			<lifeStageAges>
+				<li>
+					<def>EntityFullyFormed</def>
+					<soundCall>Pawn_Revenant_Call</soundCall>
+					<soundWounded>Pawn_Revenant_Wounded</soundWounded>
+					<soundDeath>Pawn_Revenant_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<hediffGiverSets>
+				<li>AnomalyEntity</li>
+			</hediffGiverSets>
+		</race>
+		<tools>
+			<li>
+				<label>claws</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>18</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef ParentName="Foundation_AnomalyPawnBase">
+		<defName>Foundation_Refuted</defName>
+		<label>Human Refuted</label>
+		<race>Foundation_Refuted</race>
+		<combatPower>200</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Foundation_Refuted/Foundation_Refuted</texPath>
+					<drawSize>2.5</drawSize>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,-0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Warg/Dessicated_Warg</texPath>
+					<drawSize>1.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

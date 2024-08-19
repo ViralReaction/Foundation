@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>Foundation_Anomaly_Reverence_Opinion</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>Foundation.ThoughtWorker_Precept_Social_Anomaly</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>anomaly</label>
+				<baseOpinionOffset>20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>Foundation_Anomaly_Reverence_AnomalyInColony</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>Foundation.ThoughtWorker_Precept_AnomalyInColony</workerClass>
+		<minExpectationForNegativeThought>Low</minExpectationForNegativeThought>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<stages>
+			<li>
+				<label>no anomalies</label>
+				<description>I would prefer to have some anomalies in the colony.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li>
+				<label>few anomalies</label>
+				<description>We have barely contained any anomalies.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+			<li>
+				<label>some anomalies</label>
+				<description>It's good to be capturing anomalies here, though more would be even better.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+			<li>
+				<label>lots of anomalies</label>
+				<description>It's great we're containing lots of anomalies here, though a few more wouldn't hurt.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+			<li>
+				<label>tons of anomalies</label>
+				<description>Our containment site is thriving. This is the right way to be.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+			<li>
+				<label>surrounded by anomalies</label>
+				<description>We are completely surrounded with contained anomalies.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>Foundation_Anomaly_Despised_Opinion</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>Foundation.ThoughtWorker_Precept_Social_Anomaly</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>anomaly</label>
+				<baseOpinionOffset>-40</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>Foundation_AnomalyDied_Despised</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<durationDays>10</durationDays>
+		<stages>
+			<li>
+				<label>anomaly died</label>
+				<description>The only good anomaly is a dead one.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>Foundation_AnomalySelfHatred_Despised</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>Foundation.ThoughtWorker_Precept_Anomaly</workerClass>
+		<stages>
+			<li>
+				<label>anomaly self hatred</label>
+				<description>I am what I hate. My whole existence is aberrant.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>Foundation_AnomalyColonist_Despised</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>Foundation.ThoughtWorker_Precept_AnomalyPresent</workerClass>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<stages>
+			<li>
+				<label>anomaly among us</label>
+				<description>One of them walks among us. We should expel the anomaly from our home.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>Foundation_AnomalyColonist_DespisedMap</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>Foundation.ThoughtWorker_Precept_AnomalyMap</workerClass>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<stages>
+			<li>
+				<label>anomaly nearby</label>
+				<description>There are anomalies nearby. We should purge them from this land.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

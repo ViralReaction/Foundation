@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef ParentName="Foundation_AnomalyBase">
+		<defName>Foundation_ShyGuy</defName>
+		<label>Shy Guy</label>
+		<description>Item #: SCP-096\n\nObject Class: Euclid\n\nSCP-096 is a humanoid creature measuring approximately 2.38 meters in height. Subject shows very little muscle mass, with preliminary analysis of body mass suggesting mild malnutrition. Arms are grossly out of proportion with the rest of the subject's body, with an approximate length of 1.5 meters each.\n\nSCP-096 is normally extremely docile. However, when someone views SCP-096's face, whether it be directly, via video recording, or even a photograph, it will enter a stage of considerable emotional distress. Any and all photos, video, or recordings of SCP-096's likeness are strictly forbidden without approval from Dr. [REDACTED] and O5-[REDACTED].</description>
+		<hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
+		<statBases>
+			<MoveSpeed>6</MoveSpeed>
+			<MarketValue>500</MarketValue>
+			<Mass>250</Mass>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<FilthRate>0</FilthRate>
+			<MeatAmount>0</MeatAmount>
+			<LeatherAmount>0</LeatherAmount>
+			<ToxicResistance>1</ToxicResistance>
+			<MinimumContainmentStrength>80</MinimumContainmentStrength>
+			<StaggerDurationFactor>0</StaggerDurationFactor>
+		</statBases>
+		<uiIconPath>Things/Pawn/Animal/Foundation_ShyGuy/Foundation_ShyGuy_cr_east</uiIconPath>
+		<tradeability>None</tradeability>
+		<hideStats>true</hideStats>
+		<onlyShowInspectString>true</onlyShowInspectString>
+		<hideMainDesc>true</hideMainDesc>
+		<race>
+			<body>Human</body>
+			<baseBodySize>3</baseBodySize>
+			<baseHealthScale>5</baseHealthScale>
+			<intelligence>ToolUser</intelligence>
+			<needsRest>true</needsRest>
+			<hasGenders>false</hasGenders>
+			<fleshType>EntityFlesh</fleshType>
+			<baseHungerRate>0.9</baseHungerRate>
+			<predator>true</predator>
+			<maxPreyBodySize>4.0</maxPreyBodySize>
+			<foodType>CarnivoreAnimalStrict</foodType>
+			<hasCorpse>false</hasCorpse>
+			<lifeExpectancy>1000</lifeExpectancy>
+			<soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+			<renderTree>Misc</renderTree>
+			<soundCallIntervalRange>120~240</soundCallIntervalRange>
+			<disableIgniteVerb>true</disableIgniteVerb>
+			<trainability>None</trainability>
+			<lifeStageAges>
+				<li>
+					<def>EntityFullyFormed</def>
+					<soundCall>Pawn_Revenant_Call</soundCall>
+					<soundWounded>Pawn_Revenant_Wounded</soundWounded>
+					<soundDeath>Pawn_Revenant_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+			<hediffGiverSets>
+				<li>AnomalyEntity</li>
+			</hediffGiverSets>
+		</race>
+		<comps>
+			<li Class="CompProperties_HoldingPlatformTarget">
+				<baseEscapeIntervalMtbDays>45</baseEscapeIntervalMtbDays>
+				<lookForTargetOnEscape>true</lookForTargetOnEscape>
+			</li>
+			<li Class="CompProperties_AttachPoints">
+				<points>
+					<li>
+						<offset>(-.4, 0, 0.30)</offset>
+						<type>PlatformRestraint0</type>
+					  </li>
+					  <li>
+						<offset>(.4, 0, 0.30)</offset>
+						<type>PlatformRestraint1</type>
+					  </li>
+					  <li>
+						<offset>(.3, 0, -.5)</offset>
+						<type>PlatformRestraint2</type>
+					  </li>
+					  <li>
+						<offset>(-.3, 0, -.5)</offset>
+						<type>PlatformRestraint3</type>
+					  </li>
+				</points>
+			</li>
+			<li Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<knowledgeCategory>Foundation_AnomalyKnowledge</knowledgeCategory>
+				<anomalyKnowledge>3</anomalyKnowledge>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<requiresHoldingPlatform>true</requiresHoldingPlatform>
+			</li>
+			<li Class="Foundation.Comps.CompProperties_ShyGuy">
+				<tickInterval>300</tickInterval>
+				<radius>10</radius>
+			</li>
+			<li Class="Foundation.Comps.CompProperties_AnomalyHeal">
+				<tickInterval>300</tickInterval>
+				<healAmount>30</healAmount>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Demolish</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<chanceFactor>0.15</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<armorPenetration>0.20</armorPenetration>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Demolish</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<chanceFactor>0.15</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<armorPenetration>0.20</armorPenetration>
+			</li>
+			<li>
+				<label>razorfangs</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>50</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.9</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<armorPenetration>0.50</armorPenetration>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.01</chanceFactor>
+			</li>
+		</tools>
+		<modExtensions>
+		</modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="Foundation_AnomalyPawnBase">
+		<defName>Foundation_ShyGuy</defName>
+		<label>Shy Guy</label>
+		<race>Foundation_ShyGuy</race>
+		<combatPower>25</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Foundation_ShyGuy/Foundation_ShyGuy_mad</texPath>
+					<drawSize>3</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Warg/Dessicated_Warg</texPath>
+					<drawSize>0.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

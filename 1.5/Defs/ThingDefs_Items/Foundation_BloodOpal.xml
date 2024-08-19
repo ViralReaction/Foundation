@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DrugBase">
+		<defName>Foundation_BloodOpal_Catalyst</defName>
+		<label>Blood Opal Catalyst</label>
+		<description>Item #: SCP-578-1/n/nObject Class: Safe/n/nSCP-578 is a colorless, odorless liquid consisting of a solution of water, silicon, and a previously unknown and uncharacterized enzyme. SCP-578's anomalous properties manifest when it is brought into contact with human blood, solidifing into a beautiful gemstone known as SCP-578-1.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Foundation_BloodOpal</ThingDef>
+			<RecipeDef>Foundation_Administer_BloodOpal</RecipeDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/BloodCatalyst</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>53</MarketValue>
+			<Mass>0.1</Mass>
+		</statBases>
+		<thingCategories>
+			<li>Foundation_Objects</li>
+		</thingCategories>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<baseIngestTicks>80</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Inject {0}</ingestCommandString>
+			<ingestReportString>Injecting {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<chairSearchRadius>0</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="Foundation.IngestionOutcomeDoer_IngestBloodOpal"/>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Foundation_BloodOpal</defName>
+		<label>Blood Opal</label>
+		<description>Item #: SCP-578-1/n/nObject Class: Safe/n/nSCP-578 and several hundred instances of SCP-578-1 were initially discovered during a Foundation raid on a Marshall, Carter, and Dark Ltd. facility. The facility had been used as a production site for various items made of SCP-578-1. The exact process MCD used to create SCP-578 is unknown.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Foundation_BloodOpal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+			<MarketValue>7</MarketValue>
+			<Mass>0.5</Mass>
+			<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+			<li>Foundation_Objects</li>
+		</thingCategories>
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>false</smeltable>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<commonality>0</commonality>
+			<color>(115, 7, 7)</color>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+			<statOffsets>
+				<Beauty>10</Beauty>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>0.5</MaxHitPoints>
+				<WorkToMake>1.4</WorkToMake>
+				<WorkToBuild>5.0</WorkToBuild>
+				<Beauty>2.5</Beauty>
+				<Flammability>0</Flammability>
+				<MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+
+</Defs>

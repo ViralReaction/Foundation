@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Issues -->
+	<IssueDef>
+		<defName>Foundation_Issue</defName>
+		<label>SCP</label>
+		<iconPath>UI/Issues/SCP</iconPath>
+	</IssueDef>
+
+	<!-- History events -->
+	<HistoryEventDef>
+		<defName>Foundation_Died</defName>
+		<label>anomaly died</label>
+	</HistoryEventDef>
+
+	<!-- Precepts -->
+	<PreceptDef>
+		<defName>Foundation_Reverence</defName>
+		<issue>Foundation_Issue</issue>
+		<label>reverence</label>
+		<description>We must contain as many anomalies as possible.</description>
+		<impact>Medium</impact>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>Foundation_Anomaly_Reverence_Opinion</thought>
+				<description>Anomaly</description>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>Foundation_Anomaly_Reverence_AnomalyInColony</thought>
+				<thoughtStageDescriptions>
+					<li>No anomalies </li>
+					<li>Few anomalies </li>
+					<li>Some anomalies </li>
+					<li>Lots of anomalies </li>
+					<li>Tons of anomalies </li>
+					<li>Surround by anomalies</li>
+				</thoughtStageDescriptions>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>Foundation_Equal</defName>
+		<issue>Foundation_Issue</issue>
+		<label>equal</label>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<description>We adhere to the principle of equal treatment and coexistence with SCPs and reject the notion that anomalies should be feared or oppressed due to their differences.</description>
+		<impact>Low</impact>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>Foundation_Despised</defName>
+		<issue>Foundation_Issue</issue>
+		<label>despised</label>
+		<description>These anomalies bring nothing but chaos, endangering the delicate balance of our existence.</description>
+		<impact>Medium</impact>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>Foundation_Anomaly_Despised_Opinion</thought>
+				<description>Anomaly</description>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>Foundation_Died</eventDef>
+				<thought>Foundation_AnomalyDied_Despised</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>Foundation_AnomalySelfHatred_Despised</thought>
+				<description>Anomaly self hatred</description>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>Foundation_AnomalyColonist_Despised</thought>
+				<description>Anomaly among us</description>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>Foundation_AnomalyColonist_DespisedMap</thought>
+				<description>Anomaly nearby</description>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>Foundation_Tools</defName>
+		<issue>Foundation_Issue</issue>
+		<label>tools</label>
+		<description>We see anomalies as nothing, but tools. We have no more thought for anomalies than a hammer or a pen.</description>
+		<impact>Medium</impact>
+		<comps>
+		</comps>
+	</PreceptDef>
+
+</Defs>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Basic -->
+  <EntityCodexEntryDef>
+    <defName>Foundation_ShyGuy</defName>
+    <label>Shy Guy</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_ShyGuy</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_ShyGuy/Foundation_ShyGuy_cr_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>96</orderInCategory>
+    <linkedThings>
+      <li>Foundation_ShyGuy</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+  
+  <EntityCodexEntryDef>
+    <defName>Foundation_OldMan</defName>
+    <label>Old Man</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_OldMan</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_OldMan/Foundation_OldMan_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>106</orderInCategory>
+    <linkedThings>
+      <li>Foundation_OldMan</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+  
+  <EntityCodexEntryDef>
+    <defName>Foundation_Allosaurus</defName>
+    <label>Most of Allosaurus</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_Allosaurus</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_Allosaurus/Foundation_Allosaurus_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>250</orderInCategory>
+    <linkedThings>
+      <li>Foundation_Allosaurus</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+
+  <EntityCodexEntryDef>
+    <defName>Foundation_ManyVoices</defName>
+    <label>With Many Voices</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_ManyVoices</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_ManyVoices/Foundation_ManyVoices_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>939</orderInCategory>
+    <linkedThings>
+      <li>Foundation_ManyVoices</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+  
+  <EntityCodexEntryDef>
+    <defName>Foundation_LoopSnake</defName>
+    <label>Loop Snake</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_LoopSnake</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/SCP2584/SCP2584_south</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>2584</orderInCategory>
+    <linkedThings>
+      <li>Foundation_LoopSnake</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+  
+  <EntityCodexEntryDef>
+    <defName>Foundation_Deer</defName>
+    <label>The Deer</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_Deer</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_Deer/Foundation_Deer_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>2845</orderInCategory>
+    <linkedThings>
+      <li>Foundation_Deer</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+  
+  <EntityCodexEntryDef>
+    <defName>Foundation_Refuted</defName>
+    <label>Human Refuted</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_Refuted</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_Refuted/Foundation_Refuted_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>3199</orderInCategory>
+    <linkedThings>
+      <li>Foundation_Refuted</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+  
+  <EntityCodexEntryDef>
+    <defName>Foundation_DogSpider</defName>
+    <label>Doglike Spider</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_DogSpider</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_DogSpider/Foundation_DogSpider_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>5185</orderInCategory>
+    <linkedThings>
+      <li>Foundation_DogSpider</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+  
+  <EntityCodexEntryDef>
+    <defName>Foundation_ImpossibleReptile</defName>
+    <label>Impossible Reptile</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_ImpossibleReptile</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_ImpossibleReptile/Foundation_ImpossibleReptile_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>682</orderInCategory>
+    <linkedThings>
+      <li>Foundation_ImpossibleReptile</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+  
+  <EntityCodexEntryDef>
+    <defName>Foundation_FirePachy</defName>
+    <label>Fire Pachy</label>
+    <category>Foundation_EnityCategory</category>
+    <useDescriptionFrom>Foundation_FirePachy</useDescriptionFrom>
+    <uiIconPath>Things/Pawn/Animal/Foundation_FirePachy/Foundation_FirePachy_east</uiIconPath>
+    <startDiscovered>false</startDiscovered>
+    <allowDiscoveryWhileMapGenerating>true</allowDiscoveryWhileMapGenerating>
+    <orderInCategory>5893</orderInCategory>
+    <linkedThings>
+      <li>Foundation_FirePachy</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+
+</Defs>

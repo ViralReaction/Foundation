@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModMetaData>
+    <name>The Foundation</name>
+	<packageId>VR.Foundation</packageId>
+	<author>Viral Reaction</author>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<description>Strange thing's have been happening on the outer rim, unnatural anomalies, monsters stalking the night and secretive organizations ready for war.</description>
+	<modDependencies>
+	  <li>
+		<packageId>brrainz.harmony</packageId>
+		<displayName>Harmony</displayName>
+		<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+		<downloadUrl>https://github.com/pardeike/HarmonyRimWorld</downloadUrl>
+	  </li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>ceteam.combatextended</li>
+		<li>oskarpotocki.vanillafactionsexpanded.core</li>
+	</loadAfter>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/Issues/SCP</modIconPath>
+</ModMetaData>	
