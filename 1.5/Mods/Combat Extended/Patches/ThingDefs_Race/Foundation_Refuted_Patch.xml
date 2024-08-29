@@ -51,7 +51,7 @@
 					<surpriseAttack>
 						<extraMeleeDamages>
 							<li>
-								<def>Foundation_Acid</def>
+								<def>AcidBurn</def>
 								<amount>20</amount>
 							</li>
 						</extraMeleeDamages>

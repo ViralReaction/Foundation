@@ -13,8 +13,9 @@
 	</ThingDef>
 	
 	<PawnKindDef Name="Foundation_AnomalyPawnBase" Abstract="True">
-    <defaultFactionType>Entities</defaultFactionType>
-    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
-  </PawnKindDef>
+		<defaultFactionType>Entities</defaultFactionType>
+		<overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+		<ignoresPainShock>true</ignoresPainShock>
+	</PawnKindDef>
 
 </Defs>

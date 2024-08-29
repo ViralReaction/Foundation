@@ -63,7 +63,7 @@
 			<deathAction>
 				<workerClass>Foundation.DeathActionWorker_Refuted_SpawnEgg</workerClass>
 			</deathAction>
-			<body>Bird</body>
+			<body>Foundation_Refuted</body>
 			<herdAnimal>true</herdAnimal>
 			<predator>true</predator>
 			<needsRest>false</needsRest>
@@ -112,6 +112,15 @@
 						</li>
 					</extraMeleeDamages>
 				</surpriseAttack>
+			</li>
+			<li>
+				<label>razorfangs</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>22</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 			</li>
 			<li>
 				<label>head</label>

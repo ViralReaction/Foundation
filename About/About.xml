@@ -8,6 +8,10 @@
 	</supportedVersions>
 	<description>Strange thing's have been happening on the outer rim, unnatural anomalies, monsters stalking the night and secretive organizations ready for war.</description>
 	<modDependencies>
+		<li>
+		<packageId>ludeon.rimworld.anomaly</packageId>
+		<displayName>Anomaly</displayName>
+	  </li>
 	  <li>
 		<packageId>brrainz.harmony</packageId>
 		<displayName>Harmony</displayName>
@@ -20,6 +24,7 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Ludeon.RimWorld.Anomaly</li>
 		<li>ceteam.combatextended</li>
 		<li>oskarpotocki.vanillafactionsexpanded.core</li>
 	</loadAfter>

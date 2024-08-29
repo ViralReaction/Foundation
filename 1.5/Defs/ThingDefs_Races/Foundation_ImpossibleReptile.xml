@@ -70,7 +70,7 @@
 			<foodType>CarnivoreAnimalStrict</foodType>
 			<leatherDef>Leather_Human</leatherDef>
 			<useMeatFrom>Human</useMeatFrom>
-			<ignoresPainShock>true</ignoresPainShock>
+			
 			<wildness>10</wildness>
 			<trainability>Advanced</trainability>	
 			<lifeExpectancy>5000</lifeExpectancy>

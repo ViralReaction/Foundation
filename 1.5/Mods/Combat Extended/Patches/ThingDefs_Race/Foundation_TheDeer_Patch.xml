@@ -115,16 +115,16 @@
 	
 	<!-- Deer Pillars -->
 		<Operation Class="PatchOperationAddModExtension">
-		<xpath>Defs/ThingDef[defName="SCP_28451R"]</xpath>
+		<xpath>Defs/ThingDef[defName="Foundation_Deer_Transmuted"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
-				<bodyShape>QuadrupedTall</bodyShape>
+				<bodyShape>Humanoid</bodyShape>
 			</li>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="SCP_28451R"]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="Foundation_Deer_Transmuted"]/statBases</xpath>
 		<value>
 			<MeleeDodgeChance>0.0</MeleeDodgeChance>
 			<MeleeCritChance>0.10</MeleeCritChance>
@@ -133,21 +133,21 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SCP_28451R"]/statBases/ArmorRating_Blunt</xpath>
+		<xpath>Defs/ThingDef[defName="Foundation_Deer_Transmuted"]/statBases/ArmorRating_Blunt</xpath>
 		<value>
 			<ArmorRating_Blunt>4</ArmorRating_Blunt>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SCP_28451R"]/statBases/ArmorRating_Sharp</xpath>
+		<xpath>Defs/ThingDef[defName="Foundation_Deer_Transmuted"]/statBases/ArmorRating_Sharp</xpath>
 		<value>
 			<ArmorRating_Sharp>2</ArmorRating_Sharp>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="SCP_28451R"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="Foundation_Deer_Transmuted"]/tools</xpath>
 		<value>
 			<tools>
 				<li>

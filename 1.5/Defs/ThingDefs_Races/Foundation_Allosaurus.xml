@@ -32,7 +32,6 @@
 			<maxPreyBodySize>4.0</maxPreyBodySize>
 			<foodType>CarnivoreAnimalStrict</foodType>
 			<hasCorpse>false</hasCorpse>
-			<ignoresPainShock>true</ignoresPainShock>
 			<lifeExpectancy>1000</lifeExpectancy>
 			<soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
 			<renderTree>Misc</renderTree>

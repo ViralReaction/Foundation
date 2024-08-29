@@ -30,7 +30,6 @@
 			<fleshType>EntityFlesh</fleshType>
 			<foodType>VegetarianRoughAnimal</foodType>
 			<hasCorpse>false</hasCorpse>
-			<ignoresPainShock>true</ignoresPainShock>
 			<wildness>1</wildness>
 			<lifeExpectancy>100</lifeExpectancy>
 			<trainability>None</trainability>
