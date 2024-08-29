@@ -1,4 +1,22 @@
-﻿using HarmonyLib;
+﻿#region
+//Foundation
+//Copyright (C) 2023  ViralReaction
+//
+//This program is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#endregion
+
+using HarmonyLib;
 using RimWorld.Planet;
 using RimWorld;
 using System;
@@ -17,53 +35,33 @@ namespace Foundation.HarmonyPatches
         {
             Harmony harmony = new Harmony("rw.foundation");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-            harmony.Patch((MethodBase)AccessTools.Method(typeof(Need_Food), "NeedInterval"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "SCP096_Full"));
-            harmony.Patch((MethodBase)AccessTools.Method(typeof(Need_Food), "NeedInterval"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "SCP106_Starving"));
-            harmony.Patch((MethodBase)AccessTools.Method(typeof(FoodUtility), "IsAcceptablePreyFor"), new HarmonyMethod(typeof(FoundationHarmony), "SCP106_HumansOnlyAcceptablePrey"));
-            harmony.Patch((MethodBase)AccessTools.Method(typeof(JobDriver_PredatorHunt), "CheckWarnPlayer"), new HarmonyMethod(typeof(FoundationHarmony), "SCP106_DontWarnPlayerHunted"));
-            harmony.Patch((MethodBase)AccessTools.Method(typeof(Need_Food), "NeedInterval"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "SCP939_Starving"));
-            harmony.Patch((MethodBase)AccessTools.Method(typeof(FoodUtility), "IsAcceptablePreyFor"), new HarmonyMethod(typeof(FoundationHarmony), "SCP939_HumansOnlyAcceptablePrey"));
-            harmony.Patch((MethodBase)AccessTools.Method(typeof(Pawn), "TicksPerMove"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "SCP939_VoicesMovementSpeed"));
+            harmony.Patch((MethodBase)AccessTools.Method(typeof(Need_Food), "NeedInterval"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "Anomalies_Full"));
+            harmony.Patch((MethodBase)AccessTools.Method(typeof(Need_Food), "NeedInterval"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "Anomalies_Starving"));
+            harmony.Patch((MethodBase)AccessTools.Method(typeof(FoodUtility), "IsAcceptablePreyFor"), new HarmonyMethod(typeof(FoundationHarmony), "Anomalies_HumansOnlyAcceptablePrey"));
+            harmony.Patch((MethodBase)AccessTools.Method(typeof(JobDriver_PredatorHunt), "CheckWarnPlayer"), new HarmonyMethod(typeof(FoundationHarmony), "OldMan_DontWarnPlayerHunted"));
             harmony.Patch((MethodBase)AccessTools.Method(typeof(JobDriver_PredatorHunt), "CheckWarnPlayer"), new HarmonyMethod(typeof(FoundationHarmony), "SCP939_DontWarnPlayerHunted"));
+            harmony.Patch((MethodBase)AccessTools.Method(typeof(Pawn), "TicksPerMove"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "ManyVoices_VoicesMovementSpeed"));
             harmony.Patch((MethodBase)AccessTools.Method(typeof(Pawn), "TickRare"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "TickMindstateLeaveDaylight"));
             harmony.Patch((MethodBase)AccessTools.Method(typeof(WorldPawns), "GetSituation"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "SituationSCPEvent"));
         }
 
-        public static void SCP096_Full(Need_Food __instance, Pawn ___pawn)
+        public static void Anomalies_Full(Need_Food __instance, Pawn ___pawn)
         {
             if (!(___pawn.def.defName == "Foundation_096_Shy_Guy"))
                 return;
             __instance.CurLevel = 1f;
         }
 
-        public static void SCP106_Starving(Need_Food __instance, Pawn ___pawn)
+        public static void Anomalies_Starving(Need_Food __instance, Pawn ___pawn)
         {
-            if (!(___pawn.def.defName == "Foundation_106_Old_Man"))
+            if (!(___pawn.def.defName == "Foundation_106_Old_Man" || ___pawn.def.defName == "Foundation_ManyVoices"))
                 return;
             __instance.CurLevel = 0.1f;
         }
 
-        public static bool SCP106_HumansOnlyAcceptablePrey(Pawn predator, Pawn prey, ref bool __result)
+        public static bool Anomalies_HumansOnlyAcceptablePrey(Pawn predator, Pawn prey, ref bool __result)
         {
-            if (!(predator.def.defName == "Foundation_106_Old_Man"))
-                return true;
-            __result = false;
-            if (prey.RaceProps.Humanlike)
-                __result = true;
-            return false;
-        }
-        public static bool SCP106_DontWarnPlayerHunted(JobDriver_PredatorHunt __instance) => __instance.pawn.GetComp<Comp_OldMan>() == null;
-
-        public static void SCP939_Starving(Need_Food __instance, Pawn ___pawn)
-        {
-            if (!(___pawn.def.defName == "Foundation_ManyVoices"))
-                return;
-            __instance.CurLevel = 0.1f;
-        }
-
-        public static bool SCP939_HumansOnlyAcceptablePrey(Pawn predator, Pawn prey, ref bool __result)
-        {
-            if (!(predator.def.defName == "Foundation_ManyVoices"))
+            if (!(predator.def.defName == "Foundation_106_Old_Man") || predator.def.defName == "Foundation_ManyVoices")
                 return true;
             __result = false;
             if (prey.RaceProps.Humanlike)
@@ -71,7 +69,11 @@ namespace Foundation.HarmonyPatches
             return false;
         }
 
-        public static void SCP939_VoicesMovementSpeed(bool diagonal, Pawn __instance, ref float __result)
+        public static bool OldMan_DontWarnPlayerHunted(JobDriver_PredatorHunt __instance) => __instance.pawn.GetComp<Comp_OldMan>() == null;
+
+        public static bool ManyVoices_DontWarnPlayerHunted(JobDriver_PredatorHunt __instance) => __instance.pawn.GetComp<CompVoices>() == null;
+
+        public static void ManyVoices_VoicesMovementSpeed(bool diagonal, Pawn __instance, ref float __result)
         {
             if (__instance.TryGetComp<CompVoices>() == null)
                 return;
@@ -80,8 +82,6 @@ namespace Foundation.HarmonyPatches
             else if (__instance.GetComp<CompVoices>().TargetLured)
                 __result *= 10000;
         }
-
-        public static bool SCP939_DontWarnPlayerHunted(JobDriver_PredatorHunt __instance) => __instance.pawn.GetComp<CompVoices>() == null;
 
         public static void TickMindstateLeaveDaylight(Pawn __instance)
         {
@@ -121,6 +121,5 @@ namespace Foundation.HarmonyPatches
                 }
             }
         }
-
     }
 }
