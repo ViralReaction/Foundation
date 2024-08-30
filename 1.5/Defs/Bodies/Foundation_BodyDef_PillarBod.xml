@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<BodyDef>
+		<defName>Foundation_PillarBod</defName>
+		<label>Pillar</label>
+		<corePart>
+			<def>PillarBod</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<def>Brain</def>
+					<coverage>0.79</coverage>
+					<depth>Inside</depth>
+					<groups>
+						<li>Torso</li>
+					</groups>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>left locomotion organ</customLabel>
+					<coverage>0.1</coverage>
+					<height>Bottom</height>
+					<groups>
+						<li>Legs</li>
+					</groups>
+					<woundAnchorTag>LeftLeg</woundAnchorTag>
+					<parts>
+						<li>
+							<def>Foot</def>
+							<customLabel>left locomotion organ</customLabel>
+							<coverage>0.5</coverage>
+							<groups>
+								<li>Feet</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>right locomotion organ</customLabel>
+					<coverage>0.1</coverage>
+					<height>Bottom</height>
+					<groups>
+						<li>Legs</li>
+					</groups>
+					<woundAnchorTag>RightLeg</woundAnchorTag>
+					<parts>
+						<li>
+							<def>Foot</def>
+							<customLabel>right locomotion organ</customLabel>
+							<coverage>0.5</coverage>
+							<groups>
+								<li>Feet</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+
+</Defs>

@@ -33,7 +33,7 @@
 					</capacities>
 					<power>12</power>
 					<cooldownTime>0.78</cooldownTime>
-					<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+					<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
 					<surpriseAttack>
 						<extraMeleeDamages>
 							<li>
@@ -52,7 +52,7 @@
 					</capacities>
 					<power>12</power>
 					<cooldownTime>0.78</cooldownTime>
-					<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+					<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
 					<surpriseAttack>
 						<extraMeleeDamages>
 							<li>

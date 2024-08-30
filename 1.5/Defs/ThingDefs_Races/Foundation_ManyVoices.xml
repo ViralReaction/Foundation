@@ -21,7 +21,7 @@
 		<onlyShowInspectString>true</onlyShowInspectString>
 		<hideMainDesc>true</hideMainDesc>
 		<race>
-			<body>QuadrupedAnimalWithPawsMinOrgans</body>
+			<body>Foundation_QuadrupedAnimalWithClawsTailNoOrgans</body>
 			<baseBodySize>2</baseBodySize>
 			<baseHealthScale>6</baseHealthScale>
 			<intelligence>ToolUser</intelligence>
@@ -106,7 +106,7 @@
 				</capacities>
 				<power>25</power>
 				<cooldownTime>1</cooldownTime>
-				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
 				<chanceFactor>0.15</chanceFactor>
 				<surpriseAttack>
 					<extraMeleeDamages>
@@ -124,7 +124,7 @@
 				</capacities>
 				<power>25</power>
 				<cooldownTime>1</cooldownTime>
-				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
 				<chanceFactor>0.15</chanceFactor>
 				<surpriseAttack>
 					<extraMeleeDamages>

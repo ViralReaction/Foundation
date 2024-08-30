@@ -20,7 +20,7 @@
 		<onlyShowInspectString>true</onlyShowInspectString>
 		<hideMainDesc>true</hideMainDesc>
 		<race>
-			<body>Foundation_BipedalBoney</body>
+			<body>Foundation_Allosaurus</body>
 			<baseBodySize>2</baseBodySize>
 			<baseHealthScale>6</baseHealthScale>
 			<intelligence>ToolUser</intelligence>
