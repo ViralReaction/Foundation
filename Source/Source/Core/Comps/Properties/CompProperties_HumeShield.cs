@@ -18,7 +18,7 @@
 using UnityEngine;
 using Verse;
 
-namespace Foundation.Comps
+namespace Foundation
 {
     public class CompProperties_HumeShield : CompProperties
     {

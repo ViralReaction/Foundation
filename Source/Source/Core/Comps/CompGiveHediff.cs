@@ -20,7 +20,7 @@ using RimWorld;
 using System.Collections.Generic;
 using Verse;
 
-namespace Foundation.Comps
+namespace Foundation
 {
     public class CompGiveHediff : ThingComp
     {

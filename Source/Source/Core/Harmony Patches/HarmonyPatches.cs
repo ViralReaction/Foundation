@@ -43,7 +43,6 @@ namespace Foundation.HarmonyPatches
             harmony.Patch((MethodBase)AccessTools.Method(typeof(Pawn), "TickRare"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "TickMindstateLeaveDaylight"));
             harmony.Patch((MethodBase)AccessTools.Method(typeof(WorldPawns), "GetSituation"), postfix: new HarmonyMethod(typeof(FoundationHarmony), "SituationSCPEvent"));
         }
-
         public static void Anomalies_Full(Need_Food __instance, Pawn ___pawn)
         {
             if (!(___pawn.def.defName == "Foundation_096_Shy_Guy"))

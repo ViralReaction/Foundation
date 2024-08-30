@@ -17,7 +17,7 @@
 #endregion
 using Verse;
 
-namespace Foundation.Comps
+namespace Foundation
 {
     public class CompProperties_ShyGuy : CompProperties
     {

@@ -128,7 +128,7 @@
 				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
 				<requiresHoldingPlatform>true</requiresHoldingPlatform>
 			</li>
-			<li Class="Foundation.Comps.CompProperties_GiveHediffSeverity">
+			<li Class="Foundation.CompProperties_GiveHediffSeverity">
 				<hediff>Foundation_Deer_Transmute_Hediff</hediff>
 				<range>10</range>
 				<severityTick>0.1</severityTick>

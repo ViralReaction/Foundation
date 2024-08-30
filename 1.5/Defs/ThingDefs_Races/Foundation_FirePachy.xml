@@ -57,7 +57,7 @@
 				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
 				<requiresHoldingPlatform>true</requiresHoldingPlatform>
 			</li>
-			<li Class="Foundation.Comps.CompProperties_AnomalyHeal">
+			<li Class="Foundation.CompProperties_AnomalyHeal">
 				<tickInterval>300</tickInterval>
 				<healAmount>10</healAmount>
 			</li>

@@ -88,7 +88,7 @@
 				<directAttackRange>10</directAttackRange>
 				<startPounceOnLuredTargetRange>20</startPounceOnLuredTargetRange>
 			</li>
-			<li Class="Foundation.Comps.CompProperties_GiveHediffSeverity">
+			<li Class="Foundation.CompProperties_GiveHediffSeverity">
 				<hediff>Foundation_ManyVoices_Breath_Hediff</hediff>
 				<range>3</range>
 				<severityTick>0.005</severityTick>

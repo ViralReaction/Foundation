@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 
-namespace Foundation.Comps
+namespace Foundation
 {
     public class CompShyGuy : ThingComp
     {

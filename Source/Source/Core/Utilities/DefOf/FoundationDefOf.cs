@@ -51,6 +51,8 @@ namespace Foundation
         public static ThoughtDef Foundation_GenderStone_BadThought;
         public static ThoughtDef Foundation_Infected_ManyVoices_Breath;
 
+        public static FactionDef Foundation_Foundation;
+
         static FoundationDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FoundationDefOf));
     }
 }

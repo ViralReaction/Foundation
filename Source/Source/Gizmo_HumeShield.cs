@@ -16,7 +16,6 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endregion
 using UnityEngine;
-using Foundation.Comps;
 using Verse;
 
 namespace Foundation

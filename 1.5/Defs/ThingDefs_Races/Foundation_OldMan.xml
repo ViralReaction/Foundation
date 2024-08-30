@@ -90,7 +90,7 @@
 				<jumpRange>10</jumpRange>
 				<directAttackRange>3</directAttackRange>
 			</li>
-			<li Class="Foundation.Comps.CompProperties_AnomalyHeal">
+			<li Class="Foundation.CompProperties_AnomalyHeal">
 				<tickInterval>3000</tickInterval>
 				<healAmount>10</healAmount>
 			</li>

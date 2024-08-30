@@ -18,7 +18,7 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace Foundation.Comps
+namespace Foundation
 {
     public class CompProperties_GiveHediffSeverity : CompProperties
     {

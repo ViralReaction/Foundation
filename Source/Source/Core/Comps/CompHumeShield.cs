@@ -22,7 +22,7 @@ using UnityEngine;
 using Verse.Sound;
 using Verse;
 
-namespace Foundation.Comps
+namespace Foundation
 {
     [StaticConstructorOnStartup]
     public class CompHumeShield : ThingComp
