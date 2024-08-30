@@ -57,6 +57,9 @@
 				<tickInterval>300</tickInterval>
 				<healAmount>10</healAmount>
 			</li>
+			<li Class="CompProperties_ProducesBioferrite">
+				<bioferriteDensity>6</bioferriteDensity>
+			</li>
 		</comps>
 		<race>
 			<body>QuadrupedAnimalWithPawsAndTail</body>

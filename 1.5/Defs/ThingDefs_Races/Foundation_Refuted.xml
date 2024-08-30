@@ -58,6 +58,9 @@
 				<eggCountRange>1</eggCountRange>
 				<eggLayFemaleOnly>false</eggLayFemaleOnly>
 			</li>
+			<li Class="CompProperties_ProducesBioferrite">
+				<bioferriteDensity>4</bioferriteDensity>
+			</li>
 		</comps>
 		<race>
 			<deathAction>

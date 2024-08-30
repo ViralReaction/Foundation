@@ -97,6 +97,9 @@
 					<li>Foundation_ManyVoices</li>
 				</defNamesImmune>
 			</li>
+			<li Class="CompProperties_ProducesBioferrite">
+				<bioferriteDensity>3</bioferriteDensity>
+			</li>
 		</comps>
 		<tools>
 			<li>

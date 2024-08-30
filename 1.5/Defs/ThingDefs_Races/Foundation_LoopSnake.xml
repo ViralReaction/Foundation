@@ -69,7 +69,10 @@
 				<isGreenGoo>true</isGreenGoo>
 				<GreenGooLimit>15</GreenGooLimit>
 				<GreenGooTarget>Foundation_LoopSnake</GreenGooTarget>
-			</li>		
+			</li>	
+			<li Class="CompProperties_ProducesBioferrite">
+				<bioferriteDensity>2</bioferriteDensity>
+			</li>			
 		</comps>
 		<race>
 			<body>Snake</body>

@@ -90,10 +90,7 @@ namespace Foundation
             __instance.jobs.TryTakeOrderedJob(job, JobTag.DraftedOrder);
         }
 
-        public static void SituationSCPEvent(
-          Pawn p,
-          ref WorldPawnSituation __result,
-          WorldPawns __instance)
+        public static void SituationSCPEvent(Pawn p, ref WorldPawnSituation __result, WorldPawns __instance)
         {
             if (__result != WorldPawnSituation.Free || p.kindDef != PawnKindDefOf_SCP.Foundation_ManyVoices_Incident)
                 return;

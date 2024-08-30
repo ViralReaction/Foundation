@@ -138,6 +138,9 @@
 					<li>Foundation_Deer_Transmuted</li>
 				</defNamesImmune>
 			</li>
+			<li Class="CompProperties_ProducesBioferrite">
+				<bioferriteDensity>4</bioferriteDensity>
+			</li>
 		</comps>
 	</ThingDef>
   

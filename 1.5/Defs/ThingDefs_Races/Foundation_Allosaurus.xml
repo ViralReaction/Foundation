@@ -82,6 +82,9 @@
 				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
 				<requiresHoldingPlatform>true</requiresHoldingPlatform>
 			</li>
+			<li Class="CompProperties_ProducesBioferrite">
+				<bioferriteDensity>2</bioferriteDensity>
+			</li>
 		</comps>
 		<tools>
 			<li>

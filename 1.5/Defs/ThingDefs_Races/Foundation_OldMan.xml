@@ -94,6 +94,9 @@
 				<tickInterval>3000</tickInterval>
 				<healAmount>10</healAmount>
 			</li>
+			<li Class="CompProperties_ProducesBioferrite">
+				<bioferriteDensity>4</bioferriteDensity>
+			</li>
 		</comps>
 		<tools>
 			<li>

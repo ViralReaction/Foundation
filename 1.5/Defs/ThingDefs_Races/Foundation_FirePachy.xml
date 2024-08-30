@@ -61,6 +61,9 @@
 				<tickInterval>300</tickInterval>
 				<healAmount>10</healAmount>
 			</li>
+			<li Class="CompProperties_ProducesBioferrite">
+				<bioferriteDensity>2</bioferriteDensity>
+			</li>
 		</comps>
 		<race>
 			<deathAction>
