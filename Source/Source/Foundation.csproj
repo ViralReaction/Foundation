@@ -38,7 +38,7 @@
     <Compile Include="Core\Comps\Properties\CompProperties_ShyGuy.cs" />
     <Compile Include="Core\Comps\Comp_AnomalyHeal.cs" />
     <Compile Include="Core\Comps\CompShyGuy.cs" />
-    <Compile Include="Core\Comps\Hatching Utility.cs" />
+    <Compile Include="Core\Comps\CompHatcher.cs" />
     <Compile Include="Core\Comps\IngestOutcomeDoer_RemoveHediff.cs" />
     <Compile Include="Core\Comps\Properties\CompPropertiesGiveHediff.cs" />
     <Compile Include="Core\Comps\Properties\CompPropertiesHatcher.cs" />
