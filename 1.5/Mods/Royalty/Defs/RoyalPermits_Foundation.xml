@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RoyalTitlePermitDef Name="Foundation_DropResourcesBase" Abstract="True">
+		<workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+		<faction>Foundation_Foundation</faction>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>45</cooldownDays>
+		<usableOnWorldMap>true</usableOnWorldMap>
+		<royalAid>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<!-- Resources Request -->
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_MedicalDrop</defName>
+		<label>Medical Supply Drop</label>
+		<description>Call for a drop of 8 medicine.</description>
+		<minTitle>Foundation_Security</minTitle>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,0)</uiPosition>
+		<cooldownDays>10</cooldownDays>
+		<royalAid>
+			<itemsToDrop>
+				<MedicineIndustrial>8</MedicineIndustrial>
+			</itemsToDrop>
+			<favorCost>4</favorCost>
+		</royalAid>
+	</RoyalTitlePermitDef>
+	
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_PsyBlockDrop</defName>
+		<label>Anti-Memetic Supply Drop</label>
+		<description>Call for a drop of 4 psyblock and 1 mnemoguard.</description>
+		<minTitle>Foundation_Security</minTitle>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(1,0)</uiPosition>
+		<cooldownDays>10</cooldownDays>
+		<prerequisite>Foundation_MedicalDrop</prerequisite>
+		<royalAid>
+			<itemsToDrop>
+				<Foundation_PsyBlock>4</Foundation_PsyBlock>
+				<Foundation_MnemoGuard>1</Foundation_MnemoGuard>
+			</itemsToDrop>
+			<favorCost>4</favorCost>
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_EmergencyMedicalDrop</defName>
+		<label>Emergency Medicial Supply Drop</label>
+		<description>Call for a drop of 5 glitterworld medicine, 5 mnemoguard and 1 panacea pill.</description>
+		<minTitle>Foundation_Security</minTitle>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(2,0)</uiPosition>
+		<cooldownDays>45</cooldownDays>
+		<prerequisite>Foundation_PsyBlockDrop</prerequisite>
+		<royalAid>
+			<itemsToDrop>
+				<MedicineUltratech>5</MedicineUltratech>
+				<Foundation_MnemoGuard>5</Foundation_MnemoGuard>
+				<Foundation_Panacea>1</Foundation_Panacea>
+			</itemsToDrop>
+			<favorCost>8</favorCost>
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_FoodDrop</defName>
+		<label>food drop</label>
+		<description>Call for a drop of 20 packaged survival meals.</description>
+		<minTitle>Foundation_Security</minTitle>
+		<uiPosition>(0,1)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<MealSurvivalPack>20</MealSurvivalPack>
+			</itemsToDrop>
+			<favorCost>4</favorCost>
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<!-- Pawn Help Requests -->
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_CallLaborer</defName>
+		<label>call D-Class team</label>
+		<description>Call a group of 4 D-Class to assist you for 4 days. These workers can only do general labor tasks. You can control them as though they were your own colonists. You are required to keep them safe.</description>
+		<workerClass>RoyalTitlePermitWorker_CallLaborers</workerClass>
+		<minTitle>Foundation_Security</minTitle>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,2)</uiPosition>
+		<royalAid>
+			<favorCost>4</favorCost>
+			<pawnKindDef>Foundation_D_Class</pawnKindDef>
+			<pawnCount>4</pawnCount>
+			<aidDurationDays>4</aidDurationDays>
+			<targetingRange>44.9</targetingRange>
+			<targetingRequireLOS>false</targetingRequireLOS>
+		</royalAid>
+		<cooldownDays>60</cooldownDays>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_CallLaborerGang</defName>
+		<label>call laborer gang</label>
+		<description>Call a group of 8 laborers to assist you for 4 days. These workers can only do general labor tasks. You can control them as though they were your own colonists. You are required to keep them safe.</description>
+		<workerClass>RoyalTitlePermitWorker_CallLaborers</workerClass>
+		<minTitle>Foundation_Security</minTitle>
+		<permitPointCost>1</permitPointCost>
+		<prerequisite>CallLaborerTeam</prerequisite>
+		<uiPosition>(1,2)</uiPosition>
+		<royalAid>
+			<favorCost>8</favorCost>
+			<pawnKindDef>Empire_Common_Laborer</pawnKindDef>
+			<pawnCount>8</pawnCount>
+			<aidDurationDays>4</aidDurationDays>
+			<targetingRange>44.9</targetingRange>
+			<targetingRequireLOS>false</targetingRequireLOS>
+		</royalAid>
+		<cooldownDays>60</cooldownDays>
+	</RoyalTitlePermitDef>
+
+
+	<!-- Combat -->
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_CallMilitaryAidSmall</defName>
+		<label>call trooper squad</label>
+		<description>Call a group of 4 light troopers to aid you in battle.</description>
+		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+		<minTitle>Foundation_Security</minTitle>
+		<faction>Foundation_Foundation</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,3)</uiPosition>
+		<royalAid>
+			<favorCost>4</favorCost>
+			<pawnKindDef>Empire_Fighter_Trooper</pawnKindDef>
+			<pawnCount>4</pawnCount>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
+		<cooldownDays>40</cooldownDays>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_CallMilitaryAidLarge</defName>
+		<label>call janissary squad</label>
+		<description>Call a group of 4 professional janissaries to aid you in battle.</description>
+		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+		<minTitle>Foundation_Security</minTitle>
+		<faction>Foundation_Foundation</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,7)</uiPosition>
+		<royalAid>
+			<favorCost>6</favorCost>
+			<pawnKindDef>Empire_Fighter_Janissary</pawnKindDef>
+			<pawnCount>4</pawnCount>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
+		<cooldownDays>50</cooldownDays>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_CallMilitaryAidGrand</defName>
+		<label>call cataphract squad</label>
+		<description>Call a group of 4 heavy cataphracts to aid you in battle.</description>
+		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+		<minTitle>Foundation_Security</minTitle>
+		<faction>Foundation_Foundation</faction>
+		<permitPointCost>1</permitPointCost>
+		<prerequisite>CallMilitaryAidLarge</prerequisite>
+		<uiPosition>(1,7)</uiPosition>
+		<royalAid>
+			<favorCost>8</favorCost>
+			<pawnKindDef>Empire_Fighter_Cataphract</pawnKindDef>
+			<pawnCount>4</pawnCount>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
+		<cooldownDays>60</cooldownDays>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_CallOrbitalStrike</defName>
+		<label>call aerodrone strike</label>
+		<description>Call a single-impact aerodrone strike at a target position.</description>
+		<workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+		<minTitle>Foundation_Security</minTitle>
+		<faction>Foundation_Foundation</faction>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>45</cooldownDays>
+		<uiPosition>(0,5)</uiPosition>
+		<royalAid>
+			<favorCost>6</favorCost>
+			<targetingRange>44.9</targetingRange>
+			<radius>2.9</radius>
+			<explosionRadiusRange>7.9</explosionRadiusRange>
+			<explosionCount>1</explosionCount>
+			<intervalTicks>60</intervalTicks>
+			<warmupTicks>120</warmupTicks>
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_CallOrbitalSalvo</defName>
+		<label>call aerodrone salvo</label>
+		<description>Call a salvo of aerodrone strikes around a target position.</description>
+		<workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+		<minTitle>Foundation_Security</minTitle>
+		<faction>Foundation_Foundation</faction>
+		<permitPointCost>1</permitPointCost>
+		<prerequisite>CallOrbitalStrike</prerequisite>
+		<cooldownDays>60</cooldownDays>
+		<uiPosition>(1,5)</uiPosition>
+		<royalAid>
+			<favorCost>8</favorCost>
+			<targetingRange>44.9</targetingRange>
+			<radius>7.9</radius>
+			<explosionRadiusRange>5.9</explosionRadiusRange>
+			<explosionCount>6</explosionCount>
+			<intervalTicks>60</intervalTicks>
+			<warmupTicks>120</warmupTicks>
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+	<!-- Utility -->
+	<RoyalTitlePermitDef ParentName="Foundation_DropResourcesBase">
+		<defName>Foundation_CallTransportShuttle</defName>
+		<label>call transport shuttle</label>
+		<description>Call a shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
+		<workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
+		<minTitle>Foundation_Security</minTitle>
+		<faction>Foundation_Foundation</faction>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>40</cooldownDays>
+		<usableOnWorldMap>true</usableOnWorldMap>
+		<uiPosition>(0,6)</uiPosition>
+		<royalAid>
+			<favorCost>8</favorCost>
+			<targetingRange>44.9</targetingRange>
+			<targetingRequireLOS>false</targetingRequireLOS>
+		</royalAid>
+	</RoyalTitlePermitDef>
+
+</Defs>

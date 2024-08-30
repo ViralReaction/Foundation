@@ -25,7 +25,7 @@ using System.Reflection;
 using Verse.AI;
 using Verse;
 
-namespace Foundation.HarmonyPatches
+namespace Foundation
 {
     [StaticConstructorOnStartup]
     internal static class FoundationHarmony
@@ -117,6 +117,46 @@ namespace Foundation.HarmonyPatches
                     if (pawn.IsOnHoldingPlatform && pawn.HostFaction == null && !pawn.InMentalState && !pawn.Downed && (!checkAcceptableTemperatureOfAnimals || map.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(pawn.def)))
                         yield return pawn;
                 }
+            }
+        }
+
+        [HarmonyPatch(typeof(Pawn_RoyaltyTracker), nameof(Pawn_RoyaltyTracker.AddPermit))]
+        class Pawn_RoyaltyTracker_AddPermit_Patch
+        {
+            public static bool Prefix(Pawn_RoyaltyTracker __instance, RoyalTitlePermitDef permit, Faction faction, ref List<FactionPermit> ___factionPermits)
+            {
+                if (__instance != null && faction.def == FoundationDefOf.Foundation_Foundation)
+                {
+                    if (__instance.HasPermit(permit, faction))
+                    {
+                        return false;
+                    }
+                    ___factionPermits.Add(new FactionPermit(faction, __instance.GetCurrentTitle(faction), permit));
+                    return false;
+                }
+                return true;
+            }
+        }
+        [HarmonyPatch(typeof(Pawn_RoyaltyTracker), nameof(Pawn_RoyaltyTracker.GetPermitPoints))]
+        class Pawn_RoyaltyTracker_GetPermitPoints_Patch
+        {
+            public static int Postfix(int __result, Faction faction, Pawn_RoyaltyTracker __instance, ref List<FactionPermit> ___factionPermits)
+            {
+                if (__instance != null && faction.def == FoundationDefOf.Foundation_Foundation)
+                {
+                    for (int i = 0; i < ___factionPermits.Count; i++)
+                    {
+                        if (___factionPermits[i].Faction == faction)
+                        {
+                            RoyalTitlePermitDef royalTitlePermitDef = ___factionPermits[i].Permit.prerequisite;
+                            if (royalTitlePermitDef != null)
+                            { 
+                                __result += royalTitlePermitDef.permitPointCost;
+                            }
+                        }
+                    }
+                }
+                return __result;
             }
         }
     }

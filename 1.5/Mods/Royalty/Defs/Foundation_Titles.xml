@@ -16,10 +16,11 @@
 	<RoyalTitleDef ParentName="BaseFoundationTitle">
 		<defName>Foundation_Security</defName>
 		<label>security</label>
-		<description>No longer AS disposable as a D-Class, security personnel are responsible for maintaining the security and integrity of Foundation facilities.tasked with containing breaches, protecting sensitive information, and ensuring the safety of Foundation personnel.</description>
+		<description>No longer as disposable as a D-Class, security personnel are responsible for maintaining the security and integrity of Foundation facilities.tasked with containing breaches, protecting sensitive information, and ensuring the safety of Foundation personnel.</description>
 		<seniority>0</seniority>
 		<favorCost>1</favorCost>
 		<commonality>1</commonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="BaseFoundationTitle">
@@ -30,6 +31,7 @@
 		<favorCost>6</favorCost>
 		<allowDignifiedMeditationFocus>False</allowDignifiedMeditationFocus>
 		<awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
+		<permitPointsAwarded>12</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<RoyalTitleDef ParentName="BaseFoundationTitle">
@@ -40,6 +42,7 @@
 		<favorCost>8</favorCost>
 		<changeHeirQuestPoints>1000</changeHeirQuestPoints>
 		<commonality>1</commonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
 	<!-- Title Managerial -->
@@ -62,6 +65,7 @@
 		<favorCost>10</favorCost>
 		<changeHeirQuestPoints>1000</changeHeirQuestPoints>
 		<commonality>1</commonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 	
 	<RoyalTitleDef ParentName="BaseFoundationTitlePlus">
@@ -72,9 +76,10 @@
 		<favorCost>12</favorCost>
 		<changeHeirQuestPoints>1000</changeHeirQuestPoints>
 		<commonality>1</commonality>
+		<permitPointsAwarded>1</permitPointsAwarded>
 	</RoyalTitleDef>
 
-	<RoyalTitleDef Abstract="True" Name="BaseFoundTitlePlusWithRoomReq" ParentName="BaseFoundationTitlePlus">
+	<RoyalTitleDef Abstract="True" Name="BaseFoundationTitlePlusWithRoomReq" ParentName="BaseFoundationTitlePlus">
 		<changeHeirQuestPoints>1200</changeHeirQuestPoints>
 		<bedroomRequirements>
 			<li Class="RoomRequirement_Area">
@@ -102,7 +107,7 @@
 		</bedroomRequirements>
 	</RoyalTitleDef>
 
-	<RoyalTitleDef ParentName="BaseFoundTitlePlusWithRoomReq">
+	<RoyalTitleDef ParentName="BaseFoundationTitlePlusWithRoomReq">
 		<defName>Foundation_Research_Head</defName>
 		<label>head researcher</label>
 		<description>Head Researcher are responsible for overseeing entire departments and coordinating priorities and ensures that experiments adhere to Foundation protocols and safety guidelines.</description>
@@ -111,7 +116,7 @@
 		<commonality>1</commonality>
 	</RoyalTitleDef>
 	
-	<RoyalTitleDef Abstract="True" Name="BaseFoundTitlePlusWithFoodThroneReq" ParentName="BaseFoundTitlePlusWithRoomReq">
+	<RoyalTitleDef Abstract="True" Name="BaseFoundationTitlePlusWithFoodThroneReq" ParentName="BaseFoundationTitlePlusWithRoomReq">
 		<minExpectation>High</minExpectation>
 		<disabledWorkTags>
 			<li>ManualDumb</li>
@@ -179,7 +184,7 @@
 		</throneRoomRequirements>
 	</RoyalTitleDef>
 	
-	<RoyalTitleDef ParentName="BaseFoundTitlePlusWithFoodThroneReq">
+	<RoyalTitleDef ParentName="BaseFoundationTitlePlusWithFoodThroneReq">
 		<defName>Foundation_Director</defName>
 		<label>site director</label>
 		<description>Site Directors are responsible for the overall management and administration of Foundation sites under their jurisdiction.</description>

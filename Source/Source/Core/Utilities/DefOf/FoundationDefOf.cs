@@ -52,6 +52,7 @@ namespace Foundation
         public static ThoughtDef Foundation_Infected_ManyVoices_Breath;
 
         public static FactionDef Foundation_Foundation;
+        public static PawnKindDef Foundation_D_Class;
 
         static FoundationDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FoundationDefOf));
     }

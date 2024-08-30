@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef Name="Foundation_CommonerBase" Abstract="True">
+		<race>Human</race>
+		<defaultFactionType>Foundation_Foundation</defaultFactionType>
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<invNutrition>2.55</invNutrition>
+		<invFoodDef>MealSurvivalPack</invFoodDef>
+		<maxGenerationAge>53</maxGenerationAge>
+		<minGenerationAge>18</minGenerationAge>
+		<combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>
+			<min>0</min>
+			<max>0</max>
+		</combatEnhancingDrugsCount>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<thingDef>MealSurvivalPack</thingDef>
+			<countRange>
+				<min>2</min>
+				<max>4</max>
+			</countRange>
+		</inventoryOptions>
+		<specificApparelRequirements>
+			<li>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<only>(0.20, 0.20, 0.20)</only>
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="Foundation_CommonerBase">
+		<defName>Foundation_D_Class</defName>
+		<label>d-class personnel</label>
+		<combatPower>30</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					<li>Outlander</li>
+					<li>Outsider</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<isFighter>false</isFighter>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+		</apparelTags>
+		<apparelMoney>200~1000</apparelMoney>
+		<gearHealthRange>1~1</gearHealthRange>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<techHediffsMoney>50~800</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsRequired>
+		  <li>Foundation_Hediff_DClass</li>
+		</techHediffsRequired>
+		<apparelDisallowTags>
+			<li>Western</li>
+		</apparelDisallowTags>
+		<disallowedTraits>
+			<li>Nudist</li>
+		</disallowedTraits>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.2</Neanderthal>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.1</Genie>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+
+</Defs>

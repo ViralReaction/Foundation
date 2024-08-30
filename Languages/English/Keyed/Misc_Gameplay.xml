@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- SCPs -->
+	<LetterSCP939Enters>SCP939</LetterSCP939Enters>
+	<LetterSCP939EntersText>A pack of SCP939 have been spotted near the area. Be on the lookout.
+		
+	While they may not enter the area immediately, they may wander in and hunt any humanoids in the vicinity.
+	</LetterSCP939EntersText>
+
+	<!-- Letter Incidents -->
+	<LetterLabelContainmentBreach>Containment Breach</LetterLabelContainmentBreach>
+	<LetterContainmentBreach>One or more SCPs are trying to escape containment!\n\nStop their advances or destroy them.</LetterContainmentBreach>
+	<LetterLabelSCP3199Attack>SCP-3199 Invasion</LetterLabelSCP3199Attack>
+	<LetterSCP3199Attack>A flock of SCP-3199 have appeared.\n\nContain or kill them.\n\nThey will probably leave the area in a few days, leaving a LOT of eggs behind.\n\nDon't wait to get rid of the eggs, they will quickly spiral out of control.</LetterSCP3199Attack>
+	<MBReason>The final straw was: </MBReason>
+	<LetterLabelSCP131Join>SCP-131s join</LetterLabelSCP131Join>
+	<LetterSCP131Join>A pair of SCP-131s, abandoned or lost, have wandered into the area.\n\nThey seem to adore human contact and are joining the colony.</LetterSCP131Join>
+	<LetterLabelSCP529Join>SCP-529 join</LetterLabelSCP529Join>
+	<LetterSCP529Join>A female SCP-529, abandoned or lost, have wandered into the area.\n\nThey seem to adore human contact and are joining the colony.</LetterSCP529Join>
+	<LetterLabelSCP610Local>SCP-610 formation</LetterLabelSCP610Local>
+	<LetterSCP610Local>A few SCP-610 instances formed nearby.</LetterSCP610Local>
+	<LetterLabelSCP2845Attack>SCP-2845 Invasion</LetterLabelSCP2845Attack>
+	<LetterSCP2845Attack>An SCP-2845 and its SCP-2845-1 minions have appeared.\n\nContain or kill them.\n\nThey will probably leave the area in a few days.</LetterSCP2845Attack>
+
+	<!-- Specific SCP -->
+	<Foundation_GenderStoneChange>SCP-113 changed the pawn's gender to </Foundation_GenderStoneChange>
+	<Foundation_GenderStoneFail>nothing happened.</Foundation_GenderStoneFail>
+
+	<!-- Scranton Reality Anchor -->
+	<SCP.Interface.TargetEffect>Target psychic sensitivity decrease: {0}</SCP.Interface.TargetEffect>
+    <SCP.Interface.TargetRadius>Target radius: {0}</SCP.Interface.TargetRadius>
+    <SCP.Interface.PowerConsumption>Predicted power consumption: {0}W</SCP.Interface.PowerConsumption>
+	<SCP.SuppressionField.CurrentEffect>Psychic sensitivity decrease: {0}</SCP.SuppressionField.CurrentEffect>
+    <SCP.SuppressionField.CurrentRadius>Current radius: {0}</SCP.SuppressionField.CurrentRadius>
+    <SCP.SuppressionField.ConfigureSuppressionField>Configure suppression field</SCP.SuppressionField.ConfigureSuppressionField>
+    <SCP.SuppressionField.ConfigureSuppressionFieldDesc>Configure the radius and strength of the suppression</SCP.SuppressionField.ConfigureSuppressionFieldDesc>
+
+	<!-- Containment Zones -->
+	<SCP_AssignSCP>Assign SCP(s)</SCP_AssignSCP>
+	<SCP_AssignSCPDesc>Assign scp(s) to capture and keep in the cage.</SCP_AssignSCPDesc>
+
+	<!-- Containment Stuff -->
+	<DaysinContainment>Days since last breached</DaysinContainment>
+	<SCPContainment>Containment</SCPContainment>
+	<TabSCPNeeds>Contain</TabSCPNeeds>
+	<ContainmentBreakMTBDays>Containment breach interval</ContainmentBreakMTBDays>
+	<CurrentlyContainmentBreaking>Currently breaking containment</CurrentlyContainmentBreaking>
+	<ContainmentBreakMTBDaysDescription>The average days awake between containment breaks. This is affected by mood, mobility, the number of containment doors, and time since the last containment break.\n\nNote that this does not include time spent asleep.</ContainmentBreakMTBDaysDescription>
+	<FoundationSellPrice>Sell Price</FoundationSellPrice>
+	<FoundationSellPriceDescription>The base market value of this SCP if sold.</FoundationSellPriceDescription>
+
+	<!-- Precept Stuff -->
+	<CurrentTotalAnomalyPerColonist>Current total anomalies per colonist</CurrentTotalAnomalyPerColonist>
+  	<AnomalyPerColonist>total anomalies per colonist</AnomalyPerColonist>
+  	<MinAnomalyPerColonist>Expecting at least {0} anomalies per colonist.</MinAnomalyPerColonist>
+
+</LanguageData>
